@@ -118,13 +118,93 @@
 				<div class="swiper-pagination"></div>
 			</div>
 
-			<div class="navigation">
+			<div class="navigation main-navigation">
 				<!-- navigation buttons -->
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev main-prev"></div>
+				<div class="swiper-button-next main-next"></div>
 			</div>
 		</section>
 		<!-- home main banner section end -->
+
+		<!-- home sub banner section start -->
+		<section id="sub-banner-section">
+			<div class="sub-banner swiper">
+				<!-- additional required swiper wrapper -->
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 2.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 1.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 2.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/banner 3.jpg" />
+					</div>
+				</div>
+			</div>
+
+			<div class="navigation">
+				<!-- navigation buttons -->
+				<div class="swiper-button-prev sub-prev"></div>
+				<div class="swiper-button-next sub-next"></div>
+			</div>
+		</section>
+		<!-- home sub banner section end -->
+
+		<!-- daily deals start -->
+		<section id="daily-deals">
+			<div class="daily-deals-container">
+				<div class="daily-deals-content"></div>
+				<div class="daily-deals-cards"></div>
+			</div>
+		</section>
+		<!-- daily deals end -->
+
 
 		<!-- clearence section start -->
 		<!-- clearence section end -->
@@ -248,21 +328,10 @@
 		<script src="./scripts/footer.js"></script>
 		<!-- swiper-bundle.min.js -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-		<script>
-			const swiper = new Swiper(".main-banner", {
-				speed: 500,
-				slidesPerView: 1,
-				pagination: {
-					el: ".swiper-pagination",
-					dynamicBullets: true,
-					clickable: true,
-				},
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				},
-			});
-		</script>
+		
+		<script src="./scripts/subSwiper.js"></script>
+		<script src="./scripts/mainSwiper.js"></script>
+		
+		
 	</body>
 </html>
