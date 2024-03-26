@@ -1,0 +1,229 @@
+#nav-bar {
+	width: 100%;
+	background: var(--secondery);
+}
+
+.top-nav-bar {
+	width: 90%;
+	max-width: 1300px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 34px;
+}
+
+.logo {
+}
+
+.logo img {
+	width: 230px;
+}
+
+.search {
+	position: relative;
+	width: 100%;
+}
+
+.search input {
+	border: none;
+	outline: none;
+	padding: 8px 30px 8px 16px;
+	border-radius: 2px;
+	font-weight: 500;
+	color: var(--secondery);
+	width: 100%;
+}
+
+.search span {
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.icons-container {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+
+.login-order {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	color: white;
+	position: relative;
+}
+
+.login-order::before {
+	content: "";
+	background: rgba(248, 248, 248, 0.495);
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 55%;
+	transform: translateX(-50%);
+}
+
+.login {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+	transition: 0.2s linear;
+	white-space: nowrap;
+}
+
+.login:hover {
+	color: var(--acent);
+}
+
+.login span:nth-child(1) {
+	font-size: 30px;
+}
+
+.login span:nth-child(2) {
+	font-size: 9px;
+	font-weight: 400;
+}
+
+.track-order {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	transition: 0.2s linear;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.track-order:hover {
+	color: var(--acent);
+}
+
+.track-order span:nth-child(1) {
+	font-size: 30px;
+}
+
+.track-order span:nth-child(2) {
+	font-size: 9px;
+	font-weight: 400;
+}
+
+.icons {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	color: white;
+}
+
+.icons span {
+	position: relative;
+	cursor: pointer;
+	transition: 0.2s linear;
+}
+
+.icons span:hover {
+	color: var(--acent);
+}
+.badge {
+	position: absolute;
+	top: -8px;
+	left: -5px;
+	background: var(--acent);
+	color: black;
+	font-size: 9px;
+	font-weight: 500;
+	border-radius: 50%;
+	width: 13px;
+	aspect-ratio: 1;
+	display: grid;
+	place-items: center;
+}
+
+/* nav bar down section */
+
+.bottom-nav-bar {
+	width: 90%;
+	max-width: 1300px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 15px;
+}
+
+.cat {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.2s linear;
+	color: white;
+}
+
+.cat:hover {
+	color: var(--acent);
+}
+
+.cat span {
+	font-size: 20px;
+}
+
+.cat p {
+	font-size: 13px;
+	font-weight: 400;
+	white-space: nowrap;
+}
+
+/* nav bar slides section */
+.nav-slider-wrapper {
+	overflow: hidden;
+	width: 100%;
+	user-select: none;
+}
+.nav-slides {
+	display: flex;
+	gap: 10px;
+	background: lightslategray;
+	padding: 10px;
+	overflow-x: hidden;
+	user-select: none;
+}
+
+.nav-slide {
+	color: white;
+	list-style: none;
+	user-select: none;
+}
+
+.nav-slide a {
+	color: white;
+	text-decoration: none;
+	user-select: none;
+}
+
+
+
+/* nav bar slides section end */
+.nav-btn button {
+	background: var(--acent);
+	border: none;
+	outline: none;
+	padding: 6px 26px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 500;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.279);
+	cursor: pointer;
+	transition: 0.2s linear;
+	white-space: nowrap;
+}
+
+.nav-btn button:hover {
+	background: transparent;
+	border: 1px solid var(--acent);
+	color: white;
+}
