@@ -78,15 +78,12 @@ const swiperChooseByBrand = new Swiper(".choose-brand", {
 const swiperProduct = new Swiper(".product-swiper", {
 	speed: 500,
 	slidesPerView: 2,
-	spaceBetween: 10,
 	breakpoints: {
 		480: {
 			slidesPerView: 4,
-			spaceBetween: 15,
 		},
 		901: {
 			slidesPerView: 6,
-			spaceBetween: 20,
 		},
 	},
 });

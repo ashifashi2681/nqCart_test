@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
+	-webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -10,15 +11,30 @@
 	--acent: #ffe500;
 }
 
-::-moz-selection { 
-  color: white;
-  background: var(--acent);
+::-moz-selection {
+	color: white;
+	background: var(--acent);
 }
 
 ::selection {
-  color: white;
-  background: var(--acent);
+	color: white;
+	background: var(--acent);
 }
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+	background: #b8b8b8;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--secondery);
+}
+
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ main banner starts ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
 #main-banner-section {
 	width: 100%;
@@ -342,6 +358,8 @@
 .product-img {
 	display: grid;
 	place-content: center;
+	width: 90%;
+	margin: 0 auto;
 	padding: 10px;
 }
 
@@ -354,21 +372,25 @@
 	padding: 6px;
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
-}
-.product-name > p {
-	font-size: 13px;
-	font-weight: 600;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	gap: 2px;
 	overflow: hidden;
 }
+.product-name > p {
+	font-size: clamp(12px, 1.5vw, 16px);
+	font-weight: 500;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+}
 .product-price > p {
-	font-size: 15px;
-	font-weight: 600;
+	font-size: clamp(14px, 2vw, 18px);
+	font-weight: 700;
 }
 .product-tax {
-	font-size: 10px;
+	font-size: clamp(10px, 1.1vw, 13px);
+	color: rgba(0, 0, 0, 0.8);
 }
 .delivery {
 	display: flex;
@@ -377,17 +399,19 @@
 }
 
 .delivery > i {
-	font-size: 12px;
+	font-size: clamp(10px, 1.1vw, 13px);
 }
 
 .delivery > p {
-	font-size: 10px;
+	font-size: clamp(10px, 1.1vw, 13px);
 	white-space: nowrap;
+	color: rgba(0, 0, 0, 0.8);
 }
 
 .marketplace > p {
-	font-size: 10px;
+	font-size: clamp(10px, 1.1vw, 13px);
 	white-space: nowrap;
+	color: rgba(0, 0, 0, 0.8);
 }
 
 /* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ best selling end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
@@ -418,7 +442,6 @@
 }
 /* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ banner end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
 
-
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ new arrival start ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
 #new-arrivals {
 	width: 90%;
@@ -427,6 +450,142 @@
 	margin-bottom: 17px;
 }
 /* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ new arrival end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
+
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ clearence section start ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+#clearence {
+	width: 90%;
+	max-width: 1300px;
+	margin: 0 auto;
+	margin-bottom: 17px;
+}
+
+.clearence {
+	display: grid;
+	grid-auto-flow: row;
+	background: #d9e1fb;
+}
+
+.clearence-img-btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 12px;
+}
+
+.clearence-img {
+	width: clamp(154px, 20vw, 289px);
+}
+
+.clearence-img > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.clearence-btn {
+	background: #000;
+	border: none;
+	color: white;
+	font-size: clamp(10px, 1.1vw, 13px);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 5px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.2s linear;
+}
+
+.clearence-btn:hover {
+	box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.clearence-btn > i {
+	font-size: clamp(10px, 1.1vw, 13px);
+}
+
+.clearence-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+	gap: 10px;
+	padding: 12px;
+}
+
+.clearence-card {
+	height: 189px;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.clearence-card > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+/* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ clearence section end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
+
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ most viewed start ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+#most-viewed {
+	width: 90%;
+	max-width: 1300px;
+	margin: 0 auto;
+	margin-bottom: 17px;
+}
+/* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ most viewed end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
+
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ price drops start ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+#price-drops {
+	width: 90%;
+	max-width: 1300px;
+	margin: 0 auto;
+	margin-bottom: 17px;
+}
+/* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ price drops end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
+
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ trendings start ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+#trendings {
+	width: 90%;
+	max-width: 1300px;
+	margin: 0 auto;
+	margin-bottom: 17px;
+}
+/* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ trendings end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
+
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ popular products start ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+#popular-products {
+	width: 90%;
+	max-width: 1300px;
+	margin: 0 auto;
+	margin-bottom: 17px;
+}
+/* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ popular products end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
+
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ home about start ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+#home-about {
+	width: 100%;
+	background: #ECECEC;
+}
+
+.home-about {
+	width: 90%;
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 15px 0;
+}
+
+.home-about > p:first-child {
+	font-size: clamp(12px, 2vw, 18px);
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.home-about > p:last-child{
+	font-size: clamp(10px, 1.5vw, 16px);
+	font-weight: 200;
+}
+/* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ home about end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ 
 
 /* responsive */
 
@@ -562,39 +721,6 @@
 		margin-bottom: 24px;
 	}
 
-	.product-img {
-		padding: 12px;
-	}
-
-	.product-details {
-		padding: 8px;
-		gap: 6px;
-	}
-
-	.product-name > p {
-		font-size: 15px;
-	}
-
-	.product-price > p {
-		font-size: 17px;
-	}
-
-	.product-tax {
-		font-size: 12px;
-	}
-
-	.delivery > i {
-		font-size: 14px;
-	}
-
-	.delivery > p {
-		font-size: 12px;
-	}
-
-	.marketplace > p {
-		font-size: 12px;
-	}
-
 	/* banner */
 	#banner {
 		margin-bottom: 24px;
@@ -608,6 +734,40 @@
 
 	/* new arrival */
 	#new-arrival {
+		margin-bottom: 24px;
+	}
+
+	/* clearence */
+	#clearence {
+		margin-bottom: 24px;
+	}
+	.clearence {
+		grid-auto-flow: column;
+		grid-template-columns: 1fr 3fr;
+		align-items: center;
+	}
+
+	.clearence-card {
+		height: 202px;
+	}
+
+	/* most viewed */
+	#most-viewed {
+		margin-bottom: 24px;
+	}
+
+	/* price drops */
+	#price-drops {
+		margin-bottom: 24px;
+	}
+
+	/* trendings */
+	#trendings {
+		margin-bottom: 24px;
+	}
+
+	/* popular products */
+	#popular-products {
 		margin-bottom: 24px;
 	}
 }
@@ -702,37 +862,8 @@
 		margin-bottom: 50px;
 	}
 
-	.product-img {
-		padding: 16px;
-	}
-
 	.product-details {
 		padding: 10px;
-		gap: 8px;
-	}
-
-	.product-name > p {
-		font-size: 17px;
-	}
-
-	.product-price > p {
-		font-size: 19px;
-	}
-
-	.product-tax {
-		font-size: 14px;
-	}
-
-	.delivery > i {
-		font-size: 16px;
-	}
-
-	.delivery > p {
-		font-size: 14px;
-	}
-
-	.marketplace > p {
-		font-size: 14px;
 	}
 
 	/* banner */
@@ -747,6 +878,34 @@
 
 	/* new arrival */
 	#new-arrival {
+		margin-bottom: 50px;
+	}
+
+	/* clearence */
+	#clearence {
+		margin-bottom: 50px;
+	}
+	.clearence-card {
+		height: 310px;
+	}
+
+	/* most viewed */
+	#most-viewed {
+		margin-bottom: 50px;
+	}
+
+	/* price drops */
+	#price-drops {
+		margin-bottom: 50px;
+	}
+
+	/* trendings */
+	#trendings {
+		margin-bottom: 50px;
+	}
+
+	/* popular products */
+	#popular-products {
 		margin-bottom: 50px;
 	}
 }
