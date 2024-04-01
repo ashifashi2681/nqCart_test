@@ -1,6 +1,8 @@
 #nav-bar {
 	width: 100%;
 	background: var(--secondery);
+	padding-top: 15px;
+	overflow: hidden;
 }
 
 .top-nav-bar {
@@ -11,9 +13,6 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 34px;
-}
-
-.logo {
 }
 
 .logo img {
@@ -205,8 +204,6 @@
 	user-select: none;
 }
 
-
-
 /* nav bar slides section end */
 .nav-btn button {
 	background: var(--acent);
@@ -226,4 +223,122 @@
 	background: transparent;
 	border: 1px solid var(--acent);
 	color: white;
+}
+
+/* responsive */
+
+@media (max-width: 900px) {
+	.logo img {
+		width: 174px;
+	}
+
+	.search input {
+		padding: 7px 30px 7px 12px;
+		font-size: 12px;
+	}
+
+	.search span {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.logo img {
+		width: 140px;
+	}
+
+	.search input {
+		padding: 5px 30px 5px 12px;
+		font-size: 10px;
+	}
+
+	.search span {
+		font-size: 16px;
+	}
+
+	.icons-container {
+		gap: 40px;
+	}
+
+	.login span:nth-child(1) {
+		font-size: 25px;
+	}
+
+	.login span:nth-child(2) {
+		font-size: 8px;
+	}
+
+	.track-order span:nth-child(1) {
+		font-size: 25px;
+	}
+
+	.track-order span:nth-child(2) {
+		font-size: 8px;
+		font-weight: 400;
+	}
+
+	.icons span {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 700px) {
+	.icons-container {
+		position: fixed;
+		bottom: 0px;
+		width: 100%;
+		padding-block: 15px;
+		left: 0;
+		z-index: 100;
+		background: rgba(255, 255, 255, 0);
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		border: 1px solid rgba(255, 255, 255, 0.18);
+		transition: .3s linear;
+	}
+
+	.icons-container.hide {
+		transform: translateY(100%);
+	}
+
+	.badge,
+	.login-order::before,
+	.login span:nth-child(2),
+	.track-order span:nth-child(2) {
+		display: none;
+	}
+
+	.login span:nth-child(1),
+	.track-order span:nth-child(1),
+	.icons span {
+		font-size: 22px;
+		color: var(--secondery);
+		background: rgba(255, 255, 255, 0.14);
+		border-radius: 50%;
+		padding: 5px;
+		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	}
+
+	.icons-container {
+		flex-direction: row-reverse;
+		gap: clamp(30px, 11vw, 80px);
+		justify-content: center;
+	}
+
+	.icons {
+		gap: clamp(30px, 11vw, 80px);
+	}
+
+	.icons span:hover {
+		color: black;
+	}
+
+	
+
+	.login-order {
+		flex-direction: row-reverse;
+		gap: clamp(30px, 11vw, 80px);
+		z-index: 1000;
+	}
 }
