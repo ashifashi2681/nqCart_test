@@ -1,3 +1,14 @@
+/* nav slider */
+const swiperNavSlider = new Swiper(".nav-slider", {
+	speed: 500,
+	slidesPerView: 'auto',
+	spaceBetween: 15,
+	
+	
+});
+
+
+
 
 /* main banner */
 const swiperMain = new Swiper(".main-banner", {

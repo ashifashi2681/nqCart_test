@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 	-webkit-tap-highlight-color: transparent;
+	scroll-behavior: smooth;
 }
 
 :root {
@@ -81,8 +82,10 @@
 }
 
 .swiper-pagination-bullet {
-	width: 20px;
-	height: 2px;
+	width: 30px;
+	height: 3px;
+	border-radius: 2px;
+	background: var(--secondery);
 }
 /* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ main banner ends ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
 

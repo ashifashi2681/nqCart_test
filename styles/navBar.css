@@ -3,6 +3,10 @@
 	background: var(--secondery);
 	padding-top: 15px;
 	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
 }
 
 .top-nav-bar {
@@ -147,7 +151,7 @@
 .bottom-nav-bar {
 	width: 90%;
 	max-width: 1300px;
-	margin: 0 auto;
+	margin: 10px auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -172,36 +176,21 @@
 }
 
 .cat p {
-	font-size: 13px;
+	font-size: clamp(10px, 1.5vw, 13px);
 	font-weight: 400;
 	white-space: nowrap;
 }
 
 /* nav bar slides section */
-.nav-slider-wrapper {
-	overflow: hidden;
-	width: 100%;
-	user-select: none;
-}
-.nav-slides {
-	display: flex;
-	gap: 10px;
-	background: lightslategray;
-	padding: 10px;
-	overflow-x: hidden;
-	user-select: none;
+.nav-slider .swiper-wrapper .swiper-slide {
+	width: fit-content;
 }
 
-.nav-slide {
-	color: white;
-	list-style: none;
-	user-select: none;
-}
-
-.nav-slide a {
-	color: white;
+.nav-slider .swiper-wrapper .swiper-slide a {
+	font-size: clamp(9px, 1.5vw, 14px);
 	text-decoration: none;
-	user-select: none;
+	color: white;
+	font-weight: 500;
 }
 
 /* nav bar slides section end */
@@ -211,7 +200,7 @@
 	outline: none;
 	padding: 6px 26px;
 	border-radius: 3px;
-	font-size: 11px;
+	font-size: clamp(8px, 1.5vw, 11px);
 	font-weight: 500;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.279);
 	cursor: pointer;
@@ -228,6 +217,7 @@
 /* responsive */
 
 @media (max-width: 900px) {
+	/* nav top */
 	.logo img {
 		width: 174px;
 	}
@@ -240,15 +230,21 @@
 	.search span {
 		font-size: 20px;
 	}
+
+	/* nav bottom */
+	.nav-btn button{
+		padding: 5px 24px;
+	}
 }
 
 @media (max-width: 768px) {
+	/* nav bar top */
 	.logo img {
 		width: 140px;
 	}
 
 	.search input {
-		padding: 5px 30px 5px 12px;
+		padding: 7px 30px 7px 12px;
 		font-size: 10px;
 	}
 
@@ -280,9 +276,15 @@
 	.icons span {
 		font-size: 18px;
 	}
+
+	/* nav bar bottom */
+	.nav-btn button{
+		padding: 4px 20px;
+	}
 }
 
 @media (max-width: 700px) {
+	/* menu nav bar */
 	.icons-container {
 		position: fixed;
 		bottom: 0px;
@@ -345,4 +347,15 @@
 		gap: clamp(30px, 11vw, 80px);
 		z-index: 1000;
 	}
+
+		/* nav bar bottom */
+	.nav-btn button{
+		padding: 4px 12px;
+	}
+
+	.cat p,
+	.cat span:nth-child(3) {
+		display: none;
+	}
+
 }
