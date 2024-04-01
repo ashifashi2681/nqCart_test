@@ -5,16 +5,11 @@ const activeLinks = document.querySelectorAll(
 	".nav-slider .swiper-wrapper .swiper-slide a"
 );
 
-function activeLink() {
-	activeLinks.forEach((link) => link.classList.remove("active"));
-	this.classList.add("active");
-}
 
-activeLinks.forEach((link) => link.addEventListener("click", activeLink));
 
 const navHeight = navBar.offsetHeight - 1;
 
-mainBanner.style.paddingTop = navHeight + "px";
+mainBanner.style.marginTop = navHeight + "px";
 
 let lastScrollTop = 0;
 
@@ -27,3 +22,11 @@ window.addEventListener("scroll", () => {
 	}
 	lastScrollTop = scrollTop;
 });
+
+
+function activeLink() {
+	activeLinks.forEach((link) => link.classList.remove("active"));
+	this.classList.add("active");
+}
+
+activeLinks.forEach((link) => link.addEventListener("click", activeLink));
