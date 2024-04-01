@@ -728,7 +728,7 @@
 	#banner {
 		margin-bottom: 24px;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 22px;
+		/* gap: 18px; */
 	}
 
 	#banner div[class^="banner"] {
@@ -872,7 +872,7 @@
 	/* banner */
 	#banner {
 		margin-bottom: 50px;
-		gap: 33px;
+		/* gap: 33px; */
 	}
 
 	#banner div[class^="banner"] {

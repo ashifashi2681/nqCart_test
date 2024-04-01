@@ -32,15 +32,19 @@ const swiperSub = new Swiper(".sub-banner", {
 		prevEl: ".sub-prev",
 	},
 	slidesPerView: 5,
-	spaceBetween: 10,
+	spaceBetween: 5,
 	breakpoints: {
 		480: {
-			slidesPerView: 7,
-			spaceBetween: 15,
+			slidesPerView: 6,
+			spaceBetween: 5,
 		},
-		901: {
+		768: {
+			slidesPerView: 7,
+			spaceBetween: 5,
+		},
+		900: {
 			slidesPerView: 8,
-			spaceBetween: 20,
+			spaceBetween: 10,
 		},
 	},
 });
@@ -54,12 +58,16 @@ const swiperTopOffer = new Swiper(".top-offer", {
 	spaceBetween: 10,
 	breakpoints: {
 		480: {
+			slidesPerView: 3,
+			spaceBetween: 10,
+		},
+		768: {
 			slidesPerView: 4,
-			spaceBetween: 15,
+			spaceBetween: 10,
 		},
 		901: {
 			slidesPerView: 5,
-			spaceBetween: 20,
+			spaceBetween: 15,
 		},
 	},
 });
@@ -75,12 +83,16 @@ const swiperChooseByBrand = new Swiper(".choose-brand", {
 	spaceBetween: 10,
 	breakpoints: {
 		480: {
+			slidesPerView: 4,
+			spaceBetween: 10,
+		},
+		768: {
 			slidesPerView: 5,
-			spaceBetween: 15,
+			spaceBetween: 10,
 		},
 		901: {
 			slidesPerView: 6,
-			spaceBetween: 20,
+			spaceBetween: 15,
 		},
 	},
 });
@@ -91,9 +103,15 @@ const swiperProduct = new Swiper(".product-swiper", {
 	slidesPerView: 2,
 	breakpoints: {
 		480: {
+			slidesPerView: 3,
+		},
+		768: {
 			slidesPerView: 4,
 		},
 		901: {
+			slidesPerView: 5,
+		},
+		1200: {
 			slidesPerView: 6,
 		},
 	},

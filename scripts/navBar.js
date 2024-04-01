@@ -1,10 +1,20 @@
 const navMenu = document.querySelector(".icons-container");
 const navBar = document.getElementById("nav-bar");
 const mainBanner = document.getElementById("main-banner-section");
+const activeLinks = document.querySelectorAll(
+	".nav-slider .swiper-wrapper .swiper-slide a"
+);
+
+function activeLink() {
+	activeLinks.forEach((link) => link.classList.remove("active"));
+	this.classList.add("active");
+}
+
+activeLinks.forEach((link) => link.addEventListener("click", activeLink));
 
 const navHeight = navBar.offsetHeight - 1;
 
-mainBanner.style.marginTop = navHeight + "px";
+mainBanner.style.paddingTop = navHeight + "px";
 
 let lastScrollTop = 0;
 
