@@ -55,7 +55,7 @@ const swiperTopOffer = new Swiper(".top-offer", {
 	speed: 500,
 	spaceBetween: 20,
 	slidesPerView: 2,
-	spaceBetween: 10,
+	spaceBetween: 5,
 	breakpoints: {
 		480: {
 			slidesPerView: 3,
@@ -80,7 +80,7 @@ const swiperChooseByBrand = new Swiper(".choose-brand", {
 		prevEl: ".brand-prev",
 	},
 	slidesPerView: 3,
-	spaceBetween: 10,
+	spaceBetween: 5,
 	breakpoints: {
 		480: {
 			slidesPerView: 4,
@@ -92,7 +92,7 @@ const swiperChooseByBrand = new Swiper(".choose-brand", {
 		},
 		901: {
 			slidesPerView: 6,
-			spaceBetween: 15,
+			spaceBetween: 10,
 		},
 	},
 });

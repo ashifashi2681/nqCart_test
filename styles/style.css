@@ -40,7 +40,7 @@
 #main-banner-section {
 	width: 100%;
 	max-width: 1300px;
-	height: 128px;
+	/* height: 128px; */
 	margin: 0 auto;
 	margin-bottom: 17px;
 	display: flex;
@@ -51,6 +51,14 @@
 
 .main-banner {
 	height: 100%;
+	cursor: pointer;
+}
+
+.main-banner .swiper-wrapper .swiper-slide .desktop-img {
+	display: none;
+}
+.main-banner .swiper-wrapper .swiper-slide .tablet-img {
+	display: none;
 }
 
 .swiper-slide > img {
@@ -93,7 +101,7 @@
 #sub-banner-section {
 	width: 90%;
 	max-width: 1300px;
-	height: 70px;
+	/* height: 70px; */
 	margin: 0 auto;
 	margin-bottom: 17px;
 	display: flex;
@@ -105,10 +113,16 @@
 
 .sub-banner {
 	height: 100%;
+	padding-block: 5px;
 }
 
 .sub-banner .swiper-slide {
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	transition: 0.2s linear;
+	cursor: pointer;
+}
+
+.sub-banner .swiper-slide:hover {
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .navigation {
@@ -234,10 +248,10 @@
 
 .daily-deals-card {
 	width: 100%;
-	aspect-ratio: 1;
 	border-radius: 10px;
 	overflow: hidden;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	cursor: pointer;
 }
 
 .daily-deals-card > img {
@@ -298,16 +312,16 @@
 
 .top-offer .swiper-wrapper .swiper-slide {
 	width: 100%;
-	height: 209px;
+	aspect-ratio: 1;
 	border-radius: 10px;
 	overflow: hidden;
 	user-select: none;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 	margin-block: 10px;
+	cursor: pointer;
 }
 
 .top-offer .swiper-wrapper .swiper-slide img {
-	object-fit: cover;
 	width: 100%;
 	height: 100%;
 }
@@ -316,11 +330,9 @@
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ choose by brand start ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
 #choose-by-brand {
 	width: 90%;
-	height: 41px;
 	max-width: 1300px;
 	margin: 0 auto;
-	margin-bottom: 50px;
-	position: relative;
+	margin-bottom: 17px;
 }
 
 .choose-brand {
@@ -332,6 +344,16 @@
 	border-radius: 10px;
 	overflow: hidden;
 	user-select: none;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	margin-block: 10px;
+	cursor: pointer;
+}
+
+.choose-brand .swiper-wrapper .swiper-slide > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 
 .brand-navigation {
@@ -435,7 +457,6 @@
 	overflow: hidden;
 	cursor: pointer;
 	width: 100%;
-	height: 100px;
 }
 
 #banner div[class^="banner"] > img {
@@ -443,6 +464,14 @@
 	height: 100%;
 	object-fit: cover;
 }
+
+#banner div[class^="banner"] > .desktop-img {
+	display: none;
+}
+#banner div[class^="banner"] > .tablet-img {
+	display: none;
+}
+
 /* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ banner end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
 
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ new arrival start ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
@@ -473,7 +502,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-top: 12px;
+	margin-block: 12px;
 }
 
 .clearence-img {
@@ -510,14 +539,14 @@
 
 .clearence-cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-	gap: 10px;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 6px;
 	padding: 12px;
 }
 
 .clearence-card {
-	height: 189px;
-	border-radius: 16px;
+	width: 100%;
+	border-radius: 8px;
 	overflow: hidden;
 	box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
@@ -526,6 +555,7 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	object-position: center;
 }
 /* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ clearence section end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
 
@@ -568,7 +598,7 @@
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ home about start ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
 #home-about {
 	width: 100%;
-	background: #ECECEC;
+	background: #ececec;
 }
 
 .home-about {
@@ -584,7 +614,7 @@
 	margin-bottom: 10px;
 }
 
-.home-about > p:last-child{
+.home-about > p:last-child {
 	font-size: clamp(10px, 1.5vw, 16px);
 	font-weight: 200;
 }
@@ -598,8 +628,15 @@
 	/* main banner */
 	#main-banner-section {
 		width: 90%;
-		height: 246px;
 		margin-bottom: 24px;
+	}
+
+	.main-banner .swiper-wrapper .swiper-slide .mobile-img {
+		display: none;
+	}
+
+	.main-banner .swiper-wrapper .swiper-slide .tablet-img {
+		display: block;
 	}
 
 	.navigation {
@@ -613,7 +650,6 @@
 
 	/* sub banner */
 	#sub-banner-section {
-		height: 130px;
 		margin-bottom: 24px;
 	}
 
@@ -678,7 +714,6 @@
 
 	.daily-deals-cards {
 		grid-template-columns: repeat(4, 1fr);
-		gap: 14px;
 	}
 
 	/* title button */
@@ -705,18 +740,15 @@
 		margin-bottom: 24px;
 	}
 
-	.top-offer .swiper-wrapper .swiper-slide {
-		height: 226px;
-	}
-
 	/* choose by brand */
 	#choose-by-brand {
-		margin-bottom: 60px;
-		height: 58px;
+		margin-bottom: 24px;
+		position: relative;
 	}
+
 	.brand-navigation {
 		position: absolute;
-		top: 75px;
+		top: 90px;
 	}
 
 	/* best selling */
@@ -728,11 +760,15 @@
 	#banner {
 		margin-bottom: 24px;
 		grid-template-columns: repeat(2, 1fr);
-		/* gap: 18px; */
+		gap: 5px;
 	}
 
-	#banner div[class^="banner"] {
-		height: 138px;
+	#banner div[class^="banner"] > .mobile-img {
+		display: none;
+	}
+
+	#banner div[class^="banner"] > .tablet-img {
+		display: block;
 	}
 
 	/* new arrival */
@@ -750,10 +786,10 @@
 		align-items: center;
 	}
 
-	.clearence-card {
-		height: 202px;
+	.clearence-cards {
+		gap: 8px;
 	}
-
+	
 	/* most viewed */
 	#most-viewed {
 		margin-bottom: 24px;
@@ -775,17 +811,32 @@
 	}
 }
 
+
+/* landscape mobiles */
+@media (min-width: 768px) {
+	.clearence-cards {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
 /* lap and desktoop */
 @media (min-width: 901px) {
 	/* main banner */
 	#main-banner-section {
-		height: 319px;
+		/* height: 319px; */
 		margin-bottom: 50px;
+	}
+
+	.main-banner .swiper-wrapper .swiper-slide .tablet-img {
+		display: none;
+	}
+
+	.main-banner .swiper-wrapper .swiper-slide .desktop-img {
+		display: block;
 	}
 
 	/* sub banner */
 	#sub-banner-section {
-		height: 168px;
 		margin-bottom: 50px;
 	}
 
@@ -846,18 +897,13 @@
 		margin-bottom: 50px;
 	}
 
-	.top-offer .swiper-wrapper .swiper-slide {
-		height: 315px;
-	}
-
 	/* choose by brand */
 	#choose-by-brand {
-		margin-bottom: 75px;
-		height: 75px;
+		margin-bottom: 30px;
 	}
 	.brand-navigation {
 		position: absolute;
-		top: 95px;
+		top: 108px;
 	}
 
 	/* best selling */
@@ -872,11 +918,15 @@
 	/* banner */
 	#banner {
 		margin-bottom: 50px;
-		/* gap: 33px; */
+		gap: 10px;
 	}
 
-	#banner div[class^="banner"] {
-		height: 212px;
+	#banner div[class^="banner"] > .tablet-img {
+		display: none;
+	}
+
+	#banner div[class^="banner"] > .desktop-img {
+		display: block;
 	}
 
 	/* new arrival */
@@ -887,10 +937,13 @@
 	/* clearence */
 	#clearence {
 		margin-bottom: 50px;
+		padding-bottom: 10px;
 	}
-	.clearence-card {
-		height: 310px;
+
+	.clearence-cards {
+		grid-template-columns: repeat(4, 1fr);
 	}
+	
 
 	/* most viewed */
 	#most-viewed {
