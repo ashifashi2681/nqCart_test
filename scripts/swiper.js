@@ -1,18 +1,13 @@
 /* nav slider */
 const swiperNavSlider = new Swiper(".nav-slider", {
 	speed: 500,
-	slidesPerView: 'auto',
+	slidesPerView: "auto",
 	spaceBetween: 15,
-	
-	
 });
-
-
-
 
 /* main banner */
 const swiperMain = new Swiper(".main-banner", {
-	speed: 500,
+	speed: 1000,
 	slidesPerView: 1,
 	pagination: {
 		el: ".swiper-pagination",
@@ -21,6 +16,9 @@ const swiperMain = new Swiper(".main-banner", {
 	navigation: {
 		nextEl: ".main-next",
 		prevEl: ".main-prev",
+	},
+	autoplay: {
+		delay: 5000,
 	},
 });
 
@@ -49,11 +47,12 @@ const swiperSub = new Swiper(".sub-banner", {
 	},
 });
 
-
 /* top offers */
 const swiperTopOffer = new Swiper(".top-offer", {
 	speed: 500,
-	spaceBetween: 20,
+	autoplay: {
+		delay: 4000,
+	},
 	slidesPerView: 2,
 	spaceBetween: 5,
 	breakpoints: {
