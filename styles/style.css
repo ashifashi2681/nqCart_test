@@ -14,12 +14,12 @@
 
 ::-moz-selection {
 	color: white;
-	background: var(--acent);
+	background: var(--secondery);
 }
 
 ::selection {
 	color: white;
-	background: var(--acent);
+	background: var(--secondery);
 }
 
 /* custom scrollbar */
@@ -166,7 +166,7 @@
 
 .daily-deals-title > p {
 	color: white;
-	font-size: 9px;
+	font-size: clamp(10px, 2vw, 24px);
 	font-weight: 800;
 }
 
@@ -179,7 +179,7 @@
 }
 
 .daily-deals-time > p {
-	font-size: 7px;
+	font-size: clamp(7px, 1.5vw, 15px);
 	font-weight: 600;
 	white-space: nowrap;
 }
@@ -204,7 +204,7 @@
 }
 
 .time > P:nth-child(2) {
-	font-size: 6px;
+	font-size: clamp(6px, 1.5vw, 15px);
 	position: absolute;
 	bottom: -12px;
 	left: 50%;
@@ -230,12 +230,13 @@
 }
 
 .all-deals > p {
-	font-size: 6px;
+	font-size: clamp(6px, 1.5vw, 16px);
 	font-weight: 400;
+	white-space: nowrap;
 }
 
 .all-deals > img {
-	width: 10px;
+	width: clamp(10px,2vw, 20px);
 }
 
 /* daily deals cards */
@@ -270,7 +271,7 @@
 }
 
 .title > p {
-	font-size: 15px;
+	font-size: clamp(15px, 2.5vw, 24px);
 	font-weight: 700;
 }
 
@@ -667,16 +668,8 @@
 		width: 24px;
 	}
 
-	.daily-deals-title > p {
-		font-size: 18px;
-	}
-
 	.daily-deals-time {
 		align-items: center;
-	}
-
-	.daily-deals-time > p {
-		font-size: 11px;
 	}
 
 	.time {
@@ -694,7 +687,6 @@
 		bottom: 0;
 		left: 0;
 		transform: translateX(0);
-		font-size: 11px;
 	}
 
 	.time.hour > P:first-child::after,
@@ -706,13 +698,6 @@
 		gap: 8px;
 	}
 
-	.all-deals > p {
-		font-size: 13px;
-	}
-
-	.all-deals > img {
-		width: 19px;
-	}
 
 	.daily-deals-cards {
 		grid-template-columns: repeat(4, 1fr);
@@ -723,9 +708,6 @@
 		margin-bottom: 15px;
 	}
 
-	.title > p {
-		font-size: 20px;
-	}
 
 	.title > button {
 		font-size: 13px;
@@ -791,7 +773,7 @@
 	.clearence-cards {
 		gap: 8px;
 	}
-	
+
 	/* most viewed */
 	#most-viewed {
 		margin-bottom: 24px;
@@ -812,7 +794,6 @@
 		margin-bottom: 24px;
 	}
 }
-
 
 /* landscape mobiles */
 @media (min-width: 768px) {
@@ -859,16 +840,9 @@
 		width: 39px;
 	}
 
-	.daily-deals-title > p {
-		font-size: 24px;
-	}
-
+	
 	.daily-deals-time {
 		gap: 16px;
-	}
-
-	.daily-deals-time > p {
-		font-size: 15px;
 	}
 
 	.time > P:nth-child(1) {
@@ -877,22 +851,11 @@
 		height: 34px;
 	}
 
-	.time > P:nth-child(2) {
-		font-size: 15px;
-	}
-
-	.all-deals > p {
-		font-size: 16px;
-	}
-
 	/* title button */
 	.title {
 		margin-bottom: 20px;
 	}
 
-	.title > p {
-		font-size: 25px;
-	}
 
 	/* top offer */
 	#top-offer {
@@ -945,7 +908,6 @@
 	.clearence-cards {
 		grid-template-columns: repeat(4, 1fr);
 	}
-	
 
 	/* most viewed */
 	#most-viewed {

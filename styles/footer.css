@@ -30,9 +30,6 @@
 	margin-bottom: 14px;
 }
 
-.footer-text span:nth-child(1) {
-}
-
 .footer-text span:nth-child(2) {
 	font-size: 14px;
 	font-weight: 300;
@@ -223,11 +220,7 @@
 	}
 }
 
-@media (max-width: 768px) {
-	.footer-container {
-		gap: 1rem;
-	}
-
+/* @media (max-width: 768px) {
 	.footer-right {
 		grid-template-columns: auto 1fr;
 		gap: 1rem;
@@ -236,9 +229,13 @@
 	.footer-right-contents ul {
 		gap: 8px;
 	}
-}
+} */
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+	.footer-container {
+		gap: 1rem;
+	}
+
 	.footer-right {
 		display: block;
 		padding-top: 2.5rem;
