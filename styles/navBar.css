@@ -1,7 +1,54 @@
+.top-base-main{
+	width: 100%;
+	background: white;
+}
+.top-base {
+	width: 90%;
+	max-width: 1300px;
+	margin: 0 auto;
+	background: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+	padding-block: 6px;
+}
+
+.top-base-left {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.top-base-left div:nth-child(1),
+.top-base-left div:nth-child(2) {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.top-base-left div:nth-child(1) img,
+.top-base-left div:nth-child(2) img{
+	width: clamp(18px,2vw ,25px);
+	height: clamp(18px,2vw ,25px);
+}
+
+.top-base-left div:nth-child(1) a,
+.top-base-left div:nth-child(2) a{
+	color: black;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: clamp(8px, 0.9vw ,12px);
+}
+
+.flag img {
+	width: clamp(25px,2vw ,30px);
+}
+
 #nav-bar {
 	width: 100%;
 	background: var(--secondery);
-	padding-top: 15px;
+	/* padding-top: 15px; */
 	/* overflow: hidden; */
 	position: fixed;
 	top: 0;
@@ -78,6 +125,7 @@
 	cursor: pointer;
 	transition: 0.2s linear;
 	white-space: nowrap;
+	color: white;
 }
 
 .login:hover {
@@ -100,6 +148,7 @@
 	transition: 0.2s linear;
 	cursor: pointer;
 	white-space: nowrap;
+	color: white;
 }
 
 .track-order:hover {
@@ -126,6 +175,7 @@
 	position: relative;
 	cursor: pointer;
 	transition: 0.2s linear;
+	color: white;
 }
 
 .icons span:hover {
