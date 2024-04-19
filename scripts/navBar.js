@@ -4,6 +4,22 @@ const mainBanner = document.getElementById("main-banner-section");
 const activeLinks = document.querySelectorAll(
 	".nav-slider .swiper-wrapper .swiper-slide a"
 );
+const category = document.querySelector(".cat");
+const categoryContainer = document.querySelector(".categories-container");
+const catClose = document.querySelector(".cat-close");
+
+category.addEventListener("touchstart", () => {
+	categoryContainer.classList.add("show");
+});
+
+window.addEventListener("click", (e) => {
+	if (!category.contains(e.target)) {
+		categoryContainer.classList.remove("show");
+		// e.stopImmediatePropagation();
+	}
+
+	
+});
 
 
 
@@ -22,7 +38,6 @@ window.addEventListener("scroll", () => {
 	}
 	lastScrollTop = scrollTop;
 });
-
 
 function activeLink() {
 	activeLinks.forEach((link) => link.classList.remove("active"));

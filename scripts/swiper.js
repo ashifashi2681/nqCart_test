@@ -1,8 +1,14 @@
 /* nav slider */
 const swiperNavSlider = new Swiper(".nav-slider", {
-	speed: 500,
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+	},
+	speed: 5000,
 	slidesPerView: "auto",
 	spaceBetween: 15,
+	freeMode: true,
+	
 });
 
 /* main banner */
@@ -73,7 +79,12 @@ const swiperTopOffer = new Swiper(".top-offer", {
 
 /* choose by brand */
 const swiperChooseByBrand = new Swiper(".choose-brand", {
-	speed: 500,
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+	},
+	speed: 5000,
+	freeMode: true,
 	navigation: {
 		nextEl: ".brand-next",
 		prevEl: ".brand-prev",
@@ -93,6 +104,7 @@ const swiperChooseByBrand = new Swiper(".choose-brand", {
 			slidesPerView: 6,
 			spaceBetween: 10,
 		},
+		
 	},
 });
 
