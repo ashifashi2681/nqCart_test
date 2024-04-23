@@ -114,7 +114,7 @@ const swiperChooseByBrand = new Swiper(".choose-brand", {
 const swiperProduct = new Swiper(".product-swiper", {
 	speed: 500,
 	slidesPerView: 'auto',
-	freeMode: true,
+	// freeMode: true,
 });
 
 
