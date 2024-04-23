@@ -13,19 +13,16 @@ category.addEventListener("touchstart", () => {
 });
 
 window.addEventListener("click", (e) => {
-	if (!category.contains(e.target)) {
+	if (!categoryContainer.contains(e.target)) {
 		categoryContainer.classList.remove("show");
-		// e.stopImmediatePropagation();
 	}
-
-	
 });
-
-
 
 const navHeight = navBar.offsetHeight - 1;
 
 mainBanner.style.marginTop = navHeight + "px";
+
+
 
 let lastScrollTop = 0;
 

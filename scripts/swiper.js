@@ -108,22 +108,32 @@ const swiperChooseByBrand = new Swiper(".choose-brand", {
 	},
 });
 
-/* best selling */
+
+
+/* product swiper */
 const swiperProduct = new Swiper(".product-swiper", {
 	speed: 500,
-	slidesPerView: 2,
-	breakpoints: {
-		480: {
-			slidesPerView: 3,
-		},
-		768: {
-			slidesPerView: 4,
-		},
-		901: {
-			slidesPerView: 5,
-		},
-		1200: {
-			slidesPerView: 6,
-		},
-	},
+	slidesPerView: 'auto',
+	freeMode: true,
 });
+
+
+/* image thumb gallery */
+ var swiperGallery = new Swiper(".thumblineSlider", {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesProgress: true,
+ });
+ var swiper2 = new Swiper(".mainImageSlider", {
+		loop: true,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		thumbs: {
+			swiper: swiper,
+		},
+ });

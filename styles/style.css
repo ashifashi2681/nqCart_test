@@ -237,7 +237,7 @@
 }
 
 .all-deals > img {
-	width: clamp(10px,2vw, 20px);
+	width: clamp(10px, 2vw, 20px);
 }
 
 /* daily deals cards */
@@ -373,10 +373,322 @@
 }
 
 .product-swiper .swiper-wrapper .swiper-slide {
-	padding: 5px;
+	/* padding: 5px; */
+	width: fit-content;
 }
 
+/* product card start */
 .product-card {
+	border: 1px solid rgba(0, 0, 0, 0.101);
+	overflow: hidden;
+	max-width: 270px;
+}
+
+.product-card:hover .product-card-img a img {
+	transform: translateY(-5px);
+}
+
+.product-card-img {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding-bottom: 25px;
+}
+
+.product-card-img img {
+	width: 100%;
+	height: 100%;
+	transition: 0.2s linear;
+}
+
+.bestSeller-tag,
+.newArrival-tag,
+.trending-tag {
+	color: white;
+	font-weight: 600;
+	width: 30%;
+	padding-block: 5px;
+	border-radius: 4px;
+	font-size: 9px;
+	text-align: center;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.bestSeller-tag {
+	background: #f99500;
+}
+
+.trending-tag {
+	background: #033877;
+}
+.newArrival-tag {
+	background: #039e00;
+}
+.sale-tag {
+	background: #ee1406;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	color: white;
+	font-weight: 600;
+	font-size: 9px;
+	width: 33%;
+	clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+	border-radius: 4px;
+	padding: 5px 20px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	white-space: nowrap;
+}
+
+.sale-tag > img {
+	width: 15px;
+}
+
+.special-coundown {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 12px;
+	align-items: center;
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	width: 100%;
+	transform: translateX(-50%);
+	padding-inline: 10px;
+}
+
+.special-tag {
+	background: #fff500;
+	color: black;
+	font-weight: 600;
+	width: 100%;
+	padding-block: 7px;
+	border-radius: 4px;
+	font-size: 9px;
+	text-align: center;
+	/* position: absolute;
+	bottom: 0;
+	left: 10px; */
+	/* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+}
+
+.product-page-coundown {
+	/* position: absolute;
+	right: 10px;
+	bottom: 0px; */
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	color: #ee1406;
+	font-size: 14px;
+	font-weight: 600;
+	border: 2px solid #ee1406;
+	width: max-content;
+	padding: 4px 15px 9px 15px;
+	border-radius: 5px;
+	background: white;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.days,
+.hrs,
+.min,
+.sec {
+	position: relative;
+}
+
+.product-page-coundown .days::before {
+	content: "DAYS";
+	position: absolute;
+	bottom: -8px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 7px;
+	font-weight: 400;
+	white-space: nowrap;
+}
+
+.product-page-coundown .hrs::before {
+	content: "HRS";
+	position: absolute;
+	font-size: 7px;
+	font-weight: 400;
+	bottom: -8px;
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.product-page-coundown .min::before {
+	content: "MIN";
+	position: absolute;
+	font-size: 7px;
+	font-weight: 400;
+	bottom: -8px;
+	left: 50%;
+	transform: translateX(50%);
+	white-space: nowrap;
+}
+
+.product-page-coundown .sec::before {
+	content: "SEC";
+	position: absolute;
+	font-size: 7px;
+	font-weight: 400;
+	bottom: -8px;
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.product-page-coundown .offer-expires {
+	position: absolute;
+	top: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 8px;
+	font-weight: 600;
+	color: #363636;
+	background: white;
+	white-space: nowrap;
+	padding-inline: 9px;
+}
+/* product card info */
+.product-card-info {
+	padding: 10px;
+}
+
+.product-card-brand span {
+	color: #a6a6a6;
+	font-size: 10px;
+	font-weight: 500;
+}
+.product-card-name span {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	width: 250px;
+	overflow: hidden;
+	font-size: 12px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: #363636;
+	margin-bottom: 4px;
+}
+
+.product-card-pricing {
+	display: flex;
+	align-items: center;
+	gap: clamp(6px, 0.7vw, 20px);
+}
+
+.product-card-pricing span:nth-child(1) {
+	color: #363636;
+	font-size: 15px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.product-card-pricing span:nth-child(2) {
+	color: #a6a6a6;
+	font-size: 10px;
+	font-weight: 600;
+	text-decoration: line-through;
+	white-space: nowrap;
+}
+
+.product-card-pricing span:nth-child(3) {
+	color: #363636;
+	font-size: 7px;
+	font-weight: 600;
+	border: 1.5px solid #363636;
+	padding: 2px 5px;
+	border-radius: 3px;
+	white-space: nowrap;
+}
+
+.product-card-vat {
+	margin: 0;
+	color: #a6a6a6;
+	font-size: 7px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+/* ********************** */
+.product-card-order-seller {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+	padding-top: 5px;
+}
+
+.product-card-order {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding-top: 8px;
+}
+
+.product-card-order img {
+	width: 20px;
+}
+
+.product-card-order P {
+	font-size: 8px;
+	color: #363636;
+	border-left: 1px solid rgba(0, 0, 0, 0.3);
+	padding-left: 5px;
+	white-space: nowrap;
+}
+
+.product-card-seller {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.product-card-seller img:first-child {
+	width: 15px;
+}
+
+.product-card-seller p {
+	font-size: 8px;
+	color: #363636;
+	margin: 0;
+	border-left: 1px solid rgba(0, 0, 0, 0.3);
+	padding-left: 5px;
+}
+
+.product-card-cart-btn {
+	background: var(--secondery);
+	width: 16%;
+	max-width: 40px;
+	padding: 8px;
+	border-radius: 4px;
+	border: none;
+	position: relative;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+}
+
+.product-card-cart-btn img {
+	width: 24px;
+	aspect-ratio: 1;
+}
+
+/* product card end */
+
+/* .product-card {
 	height: 100%;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
 		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -441,7 +753,7 @@
 	font-size: clamp(10px, 1.1vw, 13px);
 	white-space: nowrap;
 	color: rgba(0, 0, 0, 0.8);
-}
+} */
 
 /* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ best selling end ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
 
@@ -700,7 +1012,6 @@
 		gap: 8px;
 	}
 
-
 	.daily-deals-cards {
 		grid-template-columns: repeat(4, 1fr);
 	}
@@ -709,7 +1020,6 @@
 	.title {
 		margin-bottom: 15px;
 	}
-
 
 	.title button {
 		font-size: 13px;
@@ -842,7 +1152,6 @@
 		width: 39px;
 	}
 
-	
 	.daily-deals-time {
 		gap: 16px;
 	}
@@ -857,7 +1166,6 @@
 	.title {
 		margin-bottom: 20px;
 	}
-
 
 	/* top offer */
 	#top-offer {
