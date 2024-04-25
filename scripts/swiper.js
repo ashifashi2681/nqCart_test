@@ -35,15 +35,15 @@ const swiperSub = new Swiper(".sub-banner", {
 		nextEl: ".sub-next",
 		prevEl: ".sub-prev",
 	},
-	slidesPerView: 5,
+	slidesPerView: 4,
 	spaceBetween: 5,
 	breakpoints: {
 		480: {
-			slidesPerView: 6,
+			slidesPerView: 5,
 			spaceBetween: 5,
 		},
 		768: {
-			slidesPerView: 7,
+			slidesPerView: 6,
 			spaceBetween: 5,
 		},
 		900: {
@@ -114,26 +114,8 @@ const swiperChooseByBrand = new Swiper(".choose-brand", {
 const swiperProduct = new Swiper(".product-swiper", {
 	speed: 500,
 	slidesPerView: 'auto',
-	// freeMode: true,
+	freeMode: true,
 });
 
 
 /* image thumb gallery */
- var swiperGallery = new Swiper(".thumblineSlider", {
-		loop: true,
-		spaceBetween: 10,
-		slidesPerView: 4,
-		freeMode: true,
-		watchSlidesProgress: true,
- });
- var swiper2 = new Swiper(".mainImageSlider", {
-		loop: true,
-		spaceBetween: 10,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-		thumbs: {
-			swiper: swiper,
-		},
- });
