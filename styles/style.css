@@ -42,7 +42,7 @@
 	width: 100%;
 	max-width: 1300px;
 	margin: 0 auto;
-	margin-bottom: 17px;
+	margin-bottom: 14px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -103,7 +103,7 @@
 	max-width: 1300px;
 	/* height: 70px; */
 	margin: 0 auto;
-	margin-bottom: 17px;
+	margin-bottom: 14px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -381,7 +381,7 @@
 .product-card {
 	border: 1px solid rgba(0, 0, 0, 0.101);
 	overflow: hidden;
-	max-width: clamp(10.625rem, 8.8393rem + 8.9286vw, 16.875rem);
+	max-width: clamp(9.375rem, 7.232rem + 10.714vw, 16.875rem);
 	/* max-width: clamp(170px, 25vw, 270px); */
 }
 
