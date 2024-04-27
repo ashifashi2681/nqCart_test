@@ -580,6 +580,7 @@
 	color: #a6a6a6;
 	font-size: clamp(0.5rem, 0.4643rem + 0.1786vw, 0.625rem);
 	font-weight: 500;
+	/* display: none; */
 }
 .product-card-name span {
 	display: -webkit-box;
@@ -596,7 +597,7 @@
 .product-card-pricing {
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 	position: relative;
 }
 
