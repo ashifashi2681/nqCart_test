@@ -24,6 +24,12 @@
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<!-- nunito sans font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+			rel="stylesheet" />
 	</head>
 	<body>
 		<section id="product-page">
@@ -208,21 +214,111 @@
 
 			<!-- PRODUCT DETIALS START -->
 			<div class="product-detials-container">
-				<div class="product-thumbnail-gallery">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Facere, incidunt? Ab repellat doloremque quam natus
-					repellendus illum. Alias distinctio, aliquam fugit sequi
-					sapiente dicta eum. Architecto, veniam ratione recusandae
-					impedit voluptatem molestias doloribus eaque omnis, sunt
-					explicabo quasi distinctio commodi provident laudantium
-					assumenda! Saepe, quis ducimus dolore eum porro, explicabo
-					tempore modi illum, magni doloribus distinctio eius voluptas
-					dicta nulla quaerat velit suscipit facilis eos. Ipsum,
-					sapiente delectus architecto atque aperiam quaerat
-					blanditiis obcaecati, possimus dignissimos ipsa tempora
-					nostrum aspernatur cum dolorum voluptas incidunt est alias
-					eum voluptatem officiis impedit sit non itaque. Qui
-					perferendis iusto cumque quae, maiores repellendus.
+				<div class="product-thumbnail-gallery" style="min-width: 50%">
+					<div
+						style="--swiper-navigation-color: #030000"
+						class="swiper mySwiper2">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-1.png"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-2.png"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-3.png"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-4.png"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-5.png"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-6.png"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-7.png"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-8.png"
+									alt="" />
+							</div>
+						</div>
+						<div class="swiper-button-next">
+							<img src="/assets/images/icons/right-arrow.svg" />
+						</div>
+						<div class="swiper-button-prev">
+							<img src="/assets/images/icons/left-arrow.svg" />
+						</div>
+					</div>
+					<div thumbsSlider="" class="swiper mySwiperThumb">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-1.png"
+									width="100"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-2.png"
+									width="100"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-3.png"
+									width="100"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-4.png"
+									width="100"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-5.png"
+									width="100"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-6.png"
+									width="100"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-7.png"
+									width="100"
+									alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/assets/images/productImage-8.png"
+									width="100"
+									alt="" />
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="product-detials">
 					<div class="product-page-brand-share-icons">
@@ -254,7 +350,7 @@
 					</div>
 					<div class="produt-rating">
 						<span>4.4</span>
-						<img src="/assets/images/icons/Star.png" />
+						<img src="/assets/images/icons/Star.svg" />
 						<span>(134)</span>
 					</div>
 					<div class="product-page-price">
@@ -366,22 +462,18 @@
 							<button>12</button>
 							<button>13</button>
 							<button>14</button>
-							<!-- <button>15</button>
+							<button>15</button>
 							<button>16</button>
-							<button>17</button> -->
-							<!-- <button>18</button>
-							<button>19</button>
-							<button>20</button>
-							<button>21</button>
-							<button>22</button>
-							<button>23</button>
-							<button>24</button> -->
+							<button>17</button>
 						</div>
 					</div>
 
-					<div>alternative</div>
+					<!-- product page alternative -->
+					<div class="product-page-alternative">
+						<h3>alternative</h3>
+					</div>
 
-					<div>qty</div>
+					<h3>qty</h3>
 
 					<div class="product-card-order-button">
 						<button>Add to Cart</button>
@@ -397,33 +489,289 @@
 						</p>
 					</div>
 
-					<div>collections</div>
+					<h3>collections</h3>
 
-					<div>frequently bought together</div>
+					<h3>frequently bought together</h3>
 				</div>
 			</div>
 			<!-- PRODUCT DETIALS END -->
 
 			<div>
-				<div>description</div>
-				<div>
-					<div>specification</div>
-					<div>rating and reviews</div>
+				<div style="background-color: rgb(199, 147, 252)">
+					description
+				</div>
+
+				<div class="product-page-spec-reviews">
+					<div class="product-page-spec">
+						<div class="specification-header">
+							<span>Specifications</span>
+						</div>
+						<div class="specification-table">
+							<table>
+								<tr>
+									<td>Brand</td>
+									<td>Ariston</td>
+								</tr>
+								<tr>
+									<td>Type</td>
+									<td>Water Heater</td>
+								</tr>
+								<tr>
+									<td>Model</td>
+									<td>Aures SF 5.5 Slim</td>
+								</tr>
+								<tr>
+									<td>color</td>
+									<td>White</td>
+								</tr>
+								<tr>
+									<td>Capacity</td>
+									<td>
+										Instantaneous water Instantaneous water
+										Instantaneous water
+									</td>
+								</tr>
+								<tr>
+									<td>Voltage</td>
+									<td>220-240 V</td>
+								</tr>
+								<tr>
+									<td>Power</td>
+									<td>5.5 kW</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+					<div
+						class="product-page-reviews-question"
+						style="min-width: 50%">
+						<div class="product-page-reviews">
+							<div class="product-page-reviews-header">
+								<span>Ratitngs & Reviews</span>
+							</div>
+
+							<div class="product-page-reviews-rate-button">
+								<div class="product-page-reviews-rate">
+									<span>5.0</span>
+									<img
+										src="./assets/images/icons/Star.svg"
+										alt="" />
+									<span>(134 Ratings & 42 Reviews)</span>
+								</div>
+
+								<div class="product-page-reviews-button">
+									<button>Rate & Review Product</button>
+								</div>
+							</div>
+
+							<div class="product-page-reviews-body">
+								<div class="user-review">
+									<div class="user-review-header">
+										<div class="user-review-name">
+											<span>Shafeeque</span>
+											<span
+												><img
+													src="/assets/images/icons/certified.svg" />Certified
+												Buyer</span
+											>
+										</div>
+
+										<div class="user-review-star">
+											<span>5.0</span>
+											<img
+												src="./assets/images/icons/Star.svg" />
+										</div>
+
+										<div class="user-review-date">
+											<span>3 Days ago</span>
+										</div>
+									</div>
+
+									<div class="user-review-body-title">
+										<span>Delicious</span>
+									</div>
+
+									<div class="user-review-body">
+										<span>
+											Great flavours and even the children
+											like them, so less sugar for whole
+											household, thank you!
+										</span>
+									</div>
+
+									<div class="user-review-image">
+										<div class="swiper userImageSlider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="product-page-reviews-body">
+								<div class="user-review">
+									<div class="user-review-header">
+										<div class="user-review-name">
+											<span>Ashir</span>
+											<span
+												><img
+													src="/assets/images/icons/certified.svg" />Certified
+												Buyer</span
+											>
+										</div>
+
+										<div class="user-review-star">
+											<span>5.0</span>
+											<img
+												src="./assets/images/icons/Star.svg" />
+										</div>
+
+										<div class="user-review-date">
+											<span>3 Days ago</span>
+										</div>
+									</div>
+
+									<div class="user-review-body-title">
+										<span>Delicious</span>
+									</div>
+
+									<div class="user-review-body">
+										<span>
+											Great flavours and even the children
+											like them, so less sugar for whole
+											household, thank you!
+										</span>
+									</div>
+
+									<div class="user-review-image">
+										<div class="swiper userImageSlider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+												<div class="swiper-slide">
+													<img
+														src="/assets/images/productImage-1.png" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-page-question">
+							<div class="product-page-question-header">
+								<div class="product-page-question-title">
+									<span>Questions and Answers</span>
+								</div>
+								<div class="product-page-question-search">
+									<input
+										type="text"
+										placeholder="Find your solutions here..." />
+									<img
+										src="./assets/images/icons/search.svg" />
+								</div>
+							</div>
+
+							<div class="product-page-question-body">
+								<div class="user-review-name">
+									<span>Ashir</span>
+									<span
+										><img
+											src="/assets/images/icons/certified.svg" />Certified
+										Buyer</span
+									>
+								</div>
+
+								<div class="user-question-answer">
+									<span class="user-question"
+										>it is stechble</span
+									>
+									<span class="user-answer"
+										>Yes, it is strechable</span
+									>
+								</div>
+							</div>
+							<div class="product-page-question-body">
+								<div class="user-review-name">
+									<span>Ashir</span>
+									<span
+										><img
+											src="/assets/images/icons/certified.svg" />Certified
+										Buyer</span
+									>
+								</div>
+
+								<div class="user-question-answer">
+									<span class="user-question"
+										>it is stechble</span
+									>
+									<span class="user-answer"
+										>Yes, it is strechable</span
+									>
+								</div>
+							</div>
+
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<div>
-				<div>related products</div>
+				<h3>related products</h3>
 			</div>
+			<h3>popular products</h3>
 
-			<div>popular products</div>
+			<h3>footer</h3>
 		</section>
-
 		<!-- swiper-bundle.min.js -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="./scripts/product-page.js"></script>
 		<script src="./scripts/swiper.js"></script>
 		<script src="./scripts/navBar.js"></script>
+
 		<!-- swiper-bundle.min.js -->
 	</body>
 </html>

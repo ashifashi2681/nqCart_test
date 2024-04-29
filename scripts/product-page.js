@@ -24,6 +24,53 @@ sizeButtons.forEach((button) => {
     });
 });
 
+/* ---------------------------------------------------------------------------------------------------------- */
 
+/* image thubnail gallery */
 
+var swiper = new Swiper(".mySwiperThumb", {
+	loop: true,
+	spaceBetween: 10,
+	slidesPerView: 4,
+	freeMode: true,
+	watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".mySwiper2", {
+	loop: true,
+	spaceBetween: 10,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	thumbs: {
+		swiper: swiper,
+	},
+});
+
+/* ------------------------------------------------------------------------------------------- */
+/* user review images section */
+var swiper = new Swiper(".userImageSlider", {
+	freeMode: true,
+	spaceBetween: 15,
+	slidesPerView:'auto'
+});
+
+/* --------------------------------------------------------- */
+
+/* review questions search */
+const searchIcon = document.querySelector(".product-page-question-search img");
+const searchInput = document.querySelector(".product-page-question-search input");
+
+searchIcon.addEventListener("click", () => {
+	searchInput.classList.add("show");
+	
+	
+	document.addEventListener("click", (e) => {
+		if (!searchIcon.contains(e.target) && !searchInput.contains(e.target)) {
+			searchInput.classList.remove("show");
+		}
+	});
+	
+	
+});
 
