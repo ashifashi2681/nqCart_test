@@ -49,8 +49,6 @@ body {
 	width: 90%;
 	max-width: 1300px;
 	margin: 0 auto;
-	/* background: white; */
-	height: 100dvh;
 }
 
 /* breadcrumb */
@@ -145,7 +143,6 @@ body {
 
 /* product detials */
 .product-detials {
-	overflow: hidden;
 }
 
 .product-page-brand-share-icons {
@@ -185,7 +182,6 @@ body {
 	content: "share";
 	position: absolute;
 	top: 0;
-	opacity: 0;
 	left: 50%;
 	transform: translateX(-50%);
 	color: white;
@@ -195,18 +191,21 @@ body {
 	background: var(--secondery);
 	transition: 0.2s linear;
 	letter-spacing: 1px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
 }
 
 .product-page-icons a:nth-child(1):hover::before {
-	opacity: 1;
 	top: -25px;
+	opacity: 1;
+	visibility: visible;
 }
 
 .product-page-icons a:nth-child(2)::before {
 	content: "Favorite";
 	position: absolute;
 	top: 0;
-	opacity: 0;
 	left: 50%;
 	transform: translateX(-50%);
 	color: white;
@@ -216,18 +215,21 @@ body {
 	background: var(--secondery);
 	transition: 0.2s linear;
 	letter-spacing: 1px;
+	opacity: 0;
+	z-index: -1;
+	visibility: hidden;
 }
 
 .product-page-icons a:nth-child(2):hover::before {
 	opacity: 1;
+	visibility: visible;
 	top: -25px;
 }
 
 .product-page-icons a:nth-child(3)::before {
-	content: "Transfer";
+	content: "Compare";
 	position: absolute;
 	top: 0;
-	opacity: 0;
 	left: 50%;
 	transform: translateX(-50%);
 	color: white;
@@ -237,10 +239,14 @@ body {
 	background: var(--secondery);
 	transition: 0.2s linear;
 	letter-spacing: 1px;
+	opacity: 0;
+	z-index: -1;
+	visibility: hidden;
 }
 
 .product-page-icons a:nth-child(3):hover::before {
 	opacity: 1;
+	visibility: visible;
 	top: -25px;
 }
 
@@ -447,6 +453,7 @@ body {
 	justify-content: center;
 	gap: 10px;
 	padding: 5px 15px;
+	overflow: hidden;
 }
 
 .product-page-feature img {
@@ -623,6 +630,126 @@ body {
 
 /* product page collection */
 /* frequently bought together */
+.product-page-freaquently-bought-together {
+	border: 1px solid #96e7ff;
+	background: #d4f1fb;
+	padding: 20px;
+	margin-block: 20px;
+}
+
+.product-page-freaquently-bought-together-header {
+	background: #000;
+	text-align: center;
+	width: 100%;
+	padding: 6px;
+	color: white;
+	font-weight: 600;
+	font-size: clamp(13px, 0.777rem + 0.179vw, 15px);
+}
+
+.mySwiperBoughtTogether .swiper-wrapper {
+	position: relative;
+	margin-block: 20px;
+}
+
+.mySwiperBoughtTogether .swiper-slide {
+	width: fit-content;
+}
+
+.mySwiperBoughtTogether .swiper-slide:not(:last-child):before {
+	content: "+";
+	font-weight: 600;
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -20px;
+	z-index: 9999;
+}
+
+/* product-page-freaquently-bought-together-card  */
+.product-page-freaquently-bought-together-card {
+	width: clamp(6.563rem, 5.634rem + 4.643vw, 9.813rem);
+	position: relative;
+	background: white;
+	padding: 5px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	cursor: pointer;
+}
+
+.product-page-freaquently-bought-together-card input {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #23a6f0;
+	border-radius: 3px;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+}
+
+.product-page-freaquently-bought-together-card input:checked::before {
+	content: "✓";
+	background: #23a6f0;
+	color: white;
+	position: absolute;
+	inset: 0;
+	display: grid;
+	place-content: center;
+}
+
+.product-page-freaquently-bought-together-img img {
+	width: 100%;
+}
+.product-page-freaquently-bought-together-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.product-page-freaquently-bought-together-price {
+	font-weight: 700;
+	font-size: clamp(0.625rem, 0.536rem + 0.446vw, 0.938rem);
+	margin-block: 5px;
+}
+.product-page-freaquently-bought-together-name {
+	font-size: clamp(0.406rem, 0.344rem + 0.313vw, 0.625rem);
+	font-weight: 400;
+	text-align: center;
+}
+
+.product-page-freaquently-bought-together-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.product-page-freaquently-bought-together-total-price span:first-child {
+	font-size: clamp(0.625rem, 0.536rem + 0.446vw, 0.938rem);
+}
+
+.product-page-freaquently-bought-together-total-price span:last-child {
+	font-weight: 600;
+	font-size: clamp(0.813rem, 0.688rem + 0.625vw, 1.25rem);
+}
+.product-page-freaquently-bought-together-button button {
+	border: none;
+	outline: none;
+	background: #23a6f0;
+	font-weight: 700;
+	color: white;
+	font-size: clamp(0.563rem, 0.473rem + 0.446vw, 0.875rem);
+	padding: 8px 20px ;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: 0.2s linear;
+}
+
+.product-page-freaquently-bought-together-button button:hover {
+	opacity: 0.8;
+}
 /* product description */
 /* specifications & reviews */
 
@@ -870,7 +997,7 @@ body {
 		position: absolute;
 		top: 0;
 		right: 0;
-		z-index: 999;
+		z-index: 1;
 	}
 	.product-detials-container {
 		flex-direction: column;
@@ -887,23 +1014,23 @@ body {
 /* media query 768px */
 @media (max-width: 768px) {
 	.product-page-name p {
-		text-align: center;
+		/* text-align: center; */
 	}
 
 	.produt-rating {
 		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
+		left: 0;
 		margin-bottom: 15px;
 	}
 
 	.product-page-price {
 		flex-direction: column;
+		align-items: start;
 		gap: 5px;
 	}
 
 	.product-page-vat p {
-		text-align: center;
+		/* text-align: center; */
 	}
 
 	.product-page-coundown {
