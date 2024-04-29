@@ -30,8 +30,8 @@ sizeButtons.forEach((button) => {
 
 var swiper = new Swiper(".mySwiperThumb", {
 	loop: true,
-	spaceBetween: 10,
-	slidesPerView: 4,
+	spaceBetween: 15,
+	slidesPerView: 'auto',
 	freeMode: true,
 	watchSlidesProgress: true,
 });
