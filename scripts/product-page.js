@@ -46,6 +46,21 @@ var swiper2 = new Swiper(".mySwiper2", {
 	},
 });
 
+/* product page qty */
+const negativeBtn = document.querySelector(".negative");
+const positiveBtn = document.querySelector(".positive");
+const qty = document.querySelector(".product-page-qty-buttons span");
+
+negativeBtn.addEventListener("click", () => {
+	if (qty.innerText > 1) {
+		qty.innerText--;
+	}
+});
+
+positiveBtn.addEventListener("click", () => {
+	qty.innerText++;
+});
+
 /* product-page-freaquently-bought-together slider */
 
 var swiper = new Swiper(".mySwiperBoughtTogether", {
@@ -62,15 +77,22 @@ const productCard = document.querySelectorAll(
 	".product-page-freaquently-bought-together-card"
 );
 
-productCard.forEach((productCard, index) => {		
-	productCard.addEventListener("click", () => {	
+productCard.forEach((productCard, index) => {
+	productCard.addEventListener("click", () => {
 		if (checkbox[index].checked) {
 			checkbox[index].checked = false;
 		} else {
 			checkbox[index].checked = true;
-		} 
-	});	
+		}
+	});
 });
+
+/* freaquently-bought-together price */
+// const productPriceText = document.querySelector(
+// 	".product-page-price > span"
+// ).innerHTML;
+// const productPrice = productPriceText.replace("AED", "");
+
 
 /* user review images section */
 var swiper = new Swiper(".userImageSlider", {
