@@ -93,7 +93,6 @@ productCard.forEach((productCard, index) => {
 // ).innerHTML;
 // const productPrice = productPriceText.replace("AED", "");
 
-
 /* user review images section */
 var swiper = new Swiper(".userImageSlider", {
 	freeMode: true,
@@ -117,4 +116,19 @@ searchIcon.addEventListener("click", () => {
 			searchInput.classList.remove("show");
 		}
 	});
+});
+
+/* mobile view bottom menu bar */
+
+const navMenu = document.querySelector(".icons-container");
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", () => {
+	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	if (scrollTop > lastScrollTop) {
+		navMenu.classList.add("hide");
+	} else {
+		navMenu.classList.remove("hide");
+	}
+	lastScrollTop = scrollTop;
 });
