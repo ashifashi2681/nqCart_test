@@ -1,7 +1,7 @@
 const navBar = document.getElementById("nav-bar");
 const breadCrumb = document.querySelector(".breadcrumb");
 
-const navHeight = navBar.offsetHeight - -15;
+const navHeight = navBar.offsetHeight - -18;
 
 breadCrumb.style.marginTop = navHeight + "px";
 
