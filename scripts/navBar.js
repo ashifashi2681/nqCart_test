@@ -42,3 +42,4 @@ function activeLink() {
 }
 
 activeLinks.forEach((link) => link.addEventListener("click", activeLink));
+

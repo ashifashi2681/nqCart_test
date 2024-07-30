@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Nunito Sans", sans-serif;
+	/* font-family: "Nunito Sans", sans-serif; */
 	font-family: "Poppins", sans-serif;
 	-webkit-tap-highlight-color: transparent;
 	scroll-behavior: smooth;
@@ -397,6 +397,7 @@ body {
 	border: 1px solid rgba(0, 0, 0, 0.101);
 	overflow: hidden;
 	max-width: clamp(9.375rem, 7.232rem + 10.714vw, 16.875rem);
+	background: white;
 	/* max-width: clamp(170px, 25vw, 270px); */
 }
 

@@ -118,4 +118,3 @@ const swiperProduct = new Swiper(".product-swiper", {
 });
 
 
-/* image thumb gallery */
