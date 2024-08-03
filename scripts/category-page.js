@@ -15,7 +15,6 @@ const swiperNavSlider = new Swiper(".nav-slider", {
 	slidesPerView: "auto",
 	spaceBetween: 15,
 	freeMode: true,
-	
 });
 
 /* filter accordian functon */
@@ -42,22 +41,38 @@ const swiperSub = new Swiper(".cat-banner", {
 		nextEl: ".sub-next",
 		prevEl: ".sub-prev",
 	},
-	slidesPerView: 4,
+	slidesPerView: 3,
 	spaceBetween: 5,
 	breakpoints: {
 		480: {
-			slidesPerView: 5,
+			slidesPerView: 4,
 			spaceBetween: 5,
 		},
 		768: {
-			slidesPerView: 6,
+			slidesPerView: 5,
 			spaceBetween: 5,
 		},
 		900: {
-			slidesPerView: 6,
+			slidesPerView: 5,
 			spaceBetween: 10,
 		},
 	},
+});
+
+/* custom select & options */
+const selectWrapper = document.querySelector(".sort-dropdown");
+const selectBtnText = document.querySelector(".sort-btn");
+const options = document.querySelectorAll(".sort-option");
+
+selectWrapper.addEventListener("click", () => {
+	selectWrapper.classList.toggle("active");
+});
+
+options.forEach((option) => {
+	selectBtnText.querySelector("span").innerText = options[0].innerHTML;
+	option.addEventListener("click", () => {
+		selectBtnText.querySelector("span").innerText = option.innerText;
+	});
 });
 
 /* category pagination */
@@ -92,3 +107,37 @@ function activeBtn() {
 paginationBtn.forEach((btn) => {
 	btn.addEventListener("click", activeBtn);
 });
+
+// make position absolute to its sibling div on mobile devices (filter and sort section on mobile view)
+
+const cat_page_main_container = document.querySelector(".cat-page-main");
+const cat_filter_body_section = document.querySelector(".filter-head");
+const originalParent = cat_filter_body_section.parentNode;
+const originalNextSibling = cat_filter_body_section.nextSibling;
+
+function positionAbsolute(e) {
+	if (!cat_page_main_container || !cat_filter_body_section) {
+		console.error("Required elements not found");
+		return;
+	}
+	// console.log(e.matches);
+	if (e.matches) {
+		cat_page_main_container.appendChild(cat_filter_body_section);
+	} else {
+		if (originalNextSibling) {
+			originalParent.insertBefore(
+				cat_filter_body_section,
+				originalNextSibling
+			);
+		} else {
+			originalParent.appendChild(cat_filter_body_section);
+		}
+	}
+}
+
+// get media query
+const mediaQuery = window.matchMedia("(max-width:768px )");
+
+mediaQuery.addEventListener("change", positionAbsolute);
+
+positionAbsolute(mediaQuery);
