@@ -150,10 +150,12 @@ const filterBody = document.querySelector(".filter-body");
 cat_filter_body_section.addEventListener("click", () => {
 	filterBody_overlay.classList.toggle("active");
 	// sortBody.classList.toggle("active");
+	document.body.style.overflow = "hidden";
 });
 filterBody_overlay.addEventListener("click", (e) => {
 	if (!filterBody.contains(e.target)) {
 		filterBody_overlay.classList.remove("active");
 		// sortBody.classList.remove("active");
+		document.body.style.overflow = "";
 	}
 });
