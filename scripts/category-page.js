@@ -141,3 +141,19 @@ const mediaQuery = window.matchMedia("(max-width:768px )");
 mediaQuery.addEventListener("change", positionAbsolute);
 
 positionAbsolute(mediaQuery);
+
+/* mobile view bottom filter & sort bar */
+const filterBody_overlay = document.querySelector(".cat-page-filter");
+const sortBody = document.querySelector(".sort-body");
+const filterBody = document.querySelector(".filter-body");
+
+cat_filter_body_section.addEventListener("click", () => {
+	filterBody_overlay.classList.toggle("active");
+	// sortBody.classList.toggle("active");
+});
+filterBody_overlay.addEventListener("click", (e) => {
+	if (!filterBody.contains(e.target)) {
+		filterBody_overlay.classList.remove("active");
+		// sortBody.classList.remove("active");
+	}
+});
