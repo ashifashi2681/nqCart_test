@@ -110,21 +110,33 @@ paginationBtn.forEach((btn) => {
 
 // make position absolute to its sibling div on mobile devices (filter and sort section on mobile view)
 
-const cat_page_main_container = document.querySelector(".cat-page-main");
+const cat_page_main = document.querySelector(".cat-page-main");
+const sort_desc_p = document.querySelector(".sort-desc");
+const referenceNode = cat_page_main.children[1];
+const orginal_sort_desc_parent = sort_desc_p.parentNode;
+const orginal_next_sibling_sort_desc = sort_desc_p.nextSibling;
+
+const cat_sort_head = document.querySelector(".cat-sort-head");
 const cat_filter_body_section = document.querySelector(".filter-head");
 const originalParent = cat_filter_body_section.parentNode;
 const originalNextSibling = cat_filter_body_section.nextSibling;
 
 function positionAbsolute(e) {
-	if (!cat_page_main_container || !cat_filter_body_section) {
+	if (!cat_sort_head || !cat_filter_body_section) {
 		console.error("Required elements not found");
 		return;
 	}
 	// console.log(e.matches);
 	if (e.matches) {
-		cat_page_main_container.appendChild(cat_filter_body_section);
+		cat_sort_head.appendChild(cat_filter_body_section);
+		cat_page_main.insertBefore(sort_desc_p, referenceNode);
 	} else {
-		if (originalNextSibling) {
+		if (originalNextSibling || orginal_next_sibling_sort_desc) {
+			orginal_sort_desc_parent.insertBefore(
+				sort_desc_p,
+				orginal_next_sibling_sort_desc
+			);
+
 			originalParent.insertBefore(
 				cat_filter_body_section,
 				originalNextSibling
