@@ -1,4 +1,5 @@
 const navBar = document.getElementById("nav-bar");
+const navMenu = document.querySelector(".icons-container");
 const breadCrumb = document.querySelector(".breadcrumb");
 
 const navHeight = navBar.offsetHeight - -10;
@@ -16,6 +17,21 @@ const swiperNavSlider = new Swiper(".nav-slider", {
 	spaceBetween: 15,
 	freeMode: true,
 });
+
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", () => {
+	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	if (scrollTop > lastScrollTop) {
+		navMenu.classList.add("hide");
+	} else {
+		navMenu.classList.remove("hide");
+	}
+	lastScrollTop = scrollTop;
+});
+
+
+
 
 /* filter accordian functon */
 const filterTitleBtn = document.querySelectorAll(".filter-sec-head");
