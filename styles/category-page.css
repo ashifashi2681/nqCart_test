@@ -903,12 +903,15 @@ body {
 	.sort-dropdown {
 		position: absolute;
 		inset: 0;
-		width: 50%;
+		width: 50%;	
+	}
+	.sort-btn img {
+		width: 12px;
 	}
 	.sort-btn {
 		flex-direction: row-reverse;
 		justify-content: center;
-		gap: 5px;
+		gap: 6px;
 		width: 100%;
 		border: none;
 		border-radius: 0;
