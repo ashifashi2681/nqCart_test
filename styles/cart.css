@@ -383,8 +383,8 @@ body {
 		left: 0;
 		right: 0;
 		z-index: 100;
-		/* border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0; */
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
 		transition: .4s linear;
 	}
 	.cart-right.active .cart-right-container {
