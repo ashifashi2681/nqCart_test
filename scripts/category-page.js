@@ -1,4 +1,4 @@
-const navBar = document.getElementById("nav-bar");
+ const navBar = document.getElementById("nav-bar");
 const navMenu = document.querySelector(".icons-container");
 const breadCrumb = document.querySelector(".breadcrumb");
 

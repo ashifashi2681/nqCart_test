@@ -10,12 +10,177 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+			rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
 			rel="stylesheet" />
+		<link rel="stylesheet" href="./styles/navBar.css" />
 		<link rel="stylesheet" href="./styles/cart.css" />
+		<link rel="stylesheet" href="/styles/footer.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<!-- swiper -->
 	</head>
 	<body>
 		<!-- nav bar start -->
+		<section id="nav-bar">
+			<!-- tob base -->
+			<div class="top-base-main">
+				<div class="top-base">
+					<div class="top-base-left">
+						<div>
+							<img
+								src="./assets/images/icons/virtual-assistants 1.png"
+								alt="" />
+							<a href="">+971 50 164 3123</a>
+						</div>
+						<div>
+							<img
+								src="./assets/images/icons/mail 1.png"
+								alt="" />
+							<a href="">sales@nqcart.ae</a>
+						</div>
+					</div>
+					<div class="flag">
+						<img src="./assets/images/icons/flag.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="top-nav-bar">
+				<div class="logo">
+					<a href="./home.html"
+						><img src="./assets/images/Logo 3.png" alt="logo"
+					/></a>
+				</div>
+				<div class="search">
+					<input type="text" placeholder="Search product..." />
+					<span class="material-symbols-outlined"> search </span>
+				</div>
+				<div class="icons-container">
+					<div class="login-order">
+						<a href="#login">
+							<div class="login">
+								<span class="material-symbols-outlined">
+									account_circle
+								</span>
+								<span>Login <br />& Register</span>
+							</div>
+						</a>
+						<a href="#track-order">
+							<div class="track-order">
+								<span class="material-symbols-outlined">
+									local_shipping
+								</span>
+								<span>Track<br />Order</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="icons">
+						<a href="#sync">
+							<span class="material-symbols-outlined">
+								sync_alt
+							</span>
+						</a>
+						<a href="#favorite">
+							<span class="material-symbols-outlined">
+								favorite
+								<div class="badge">1</div>
+							</span>
+						</a>
+						<a href="#cart">
+							<span class="material-symbols-outlined">
+								shopping_cart
+								<div class="badge">2</div>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="bottom-nav-bar">
+				<div class="cat">
+					<span class="material-symbols-outlined"> menu </span>
+					<p>All Categories</p>
+					<span class="material-symbols-outlined"> expand_more </span>
+					<!-- all categories -->
+					<div class="categories-container">
+						<!-- <div class="cat-close">X</div> -->
+						<div class="categories">
+							<ul class="categories-list">
+								<li>
+									<a href="#">Home & Garden</a>
+								</li>
+								<li>
+									<a href="#">Work Safety Protective Gear</a>
+								</li>
+								<li>
+									<a href="#">Tools</a>
+								</li>
+								<li>
+									<a href="#">Building Consumables</a>
+								</li>
+								<li>
+									<a href="#">Building Material</a>
+								</li>
+								<li>
+									<a href="#">Hardware Pumbs</a>
+								</li>
+								<li>
+									<a href="#">Office Supplies</a>
+								</li>
+								<li>
+									<a href="#">Plumbing</a>
+								</li>
+								<li>
+									<a href="#">Power & Electrical Supplies</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper nav-slider">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<a href="#">All Deals</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#best-selling">Best Selling</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#new-arrivals">New Arrivals</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#clearence">Clearance Sale</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#most-viewed">Most Viewed</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#price-drops">Price Drops</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#trendings">Trending</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#popular-products">Popular Products</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="nav-btn">
+					<a href="#bulk-enquiries">
+						<button>Bulk Enquiries</button>
+					</a>
+				</div>
+			</div>
+		</section>
 		<!-- nav bar end -->
 
 		<!-- cart section start -->
@@ -40,7 +205,9 @@
 							<div class="cart-product">
 								<div class="cart-product-body">
 									<div class="cart-product-img">
-										<img src="./assets/images/productImage-3.png"  alt="" />
+										<img
+											src="./assets/images/productImage-3.png"
+											alt="" />
 									</div>
 									<div class="cart-product-title">
 										<p>
@@ -57,49 +224,25 @@
 										<p>AED 18.00</p>
 									</div>
 									<div class="cart-product-delete">
-										<img src="./assets/images/icons/delete.svg" />
+										<img
+											src="./assets/images/icons/delete.svg" />
 									</div>
 								</div>
 								<div class="cart-product-footer">
-									<img src="./assets/images/icons/truck1.svg" />
-									<span>Delivery Expected by</span>
-									<span>25 June 2024</span>
-								</div>
-							</div>
-							
-							<div class="cart-product">
-								<div class="cart-product-body">
-									<div class="cart-product-img">
-										<img src="./assets/images/productImage-3.png"  alt="" />
+									<div class="cart-product-delivery">
+										<img
+											src="./assets/images/icons/truck1.svg" />
+										<span>Delivery Expected by</span>
+										<span>25 June 2024</span>
 									</div>
-									<div class="cart-product-title">
-										<p>
-											Bison Kit Universal Contact Adhesive
-											Glue, Super Strong, Liquid, 650ml
-										</p>
-									</div>
-									<div class="cart-product-qty">
-										<button>-</button>
-										<span>1</span>
-										<button>+</button>
-									</div>
-									<div class="cart-product-price">
-										<p>AED 18.00</p>
-									</div>
-									<div class="cart-product-delete">
-										<img src="./assets/images/icons/delete.svg" />
-									</div>
-								</div>
-								<div class="cart-product-footer">
-									<img src="./assets/images/icons/truck1.svg" />
-									<span>Delivery Expected by</span>
-									<span>25 June 2024</span>
 								</div>
 							</div>
 							<div class="cart-product">
 								<div class="cart-product-body">
 									<div class="cart-product-img">
-										<img src="./assets/images/productImage-3.png"  alt="" />
+										<img
+											src="./assets/images/productImage-3.png"
+											alt="" />
 									</div>
 									<div class="cart-product-title">
 										<p>
@@ -116,18 +259,127 @@
 										<p>AED 18.00</p>
 									</div>
 									<div class="cart-product-delete">
-										<img src="./assets/images/icons/delete.svg" />
+										<img
+											src="./assets/images/icons/delete.svg" />
 									</div>
 								</div>
 								<div class="cart-product-footer">
-									<img src="./assets/images/icons/truck1.svg" />
-									<span>Delivery Expected by</span>
-									<span>25 June 2024</span>
+									<div class="cart-product-delivery">
+										<img
+											src="./assets/images/icons/truck1.svg" />
+										<span>Delivery Expected by</span>
+										<span>25 June 2024</span>
+									</div>
 								</div>
 							</div>
-
+							<div class="cart-product">
+								<div class="cart-product-body">
+									<div class="cart-product-img">
+										<img
+											src="./assets/images/productImage-3.png"
+											alt="" />
+									</div>
+									<div class="cart-product-title">
+										<p>
+											Bison Kit Universal Contact Adhesive
+											Glue, Super Strong, Liquid, 650ml
+										</p>
+									</div>
+									<div class="cart-product-qty">
+										<button>-</button>
+										<span>1</span>
+										<button>+</button>
+									</div>
+									<div class="cart-product-price">
+										<p>AED 18.00</p>
+									</div>
+									<div class="cart-product-delete">
+										<img
+											src="./assets/images/icons/delete.svg" />
+									</div>
+								</div>
+								<div class="cart-product-footer">
+									<div class="cart-product-delivery">
+										<img
+											src="./assets/images/icons/truck1.svg" />
+										<span>Delivery Expected by</span>
+										<span>25 June 2024</span>
+									</div>
+								</div>
+							</div>
+							<div class="cart-product">
+								<div class="cart-product-body">
+									<div class="cart-product-img">
+										<img
+											src="./assets/images/productImage-3.png"
+											alt="" />
+									</div>
+									<div class="cart-product-title">
+										<p>
+											Bison Kit Universal Contact Adhesive
+											Glue, Super Strong, Liquid, 650ml
+										</p>
+									</div>
+									<div class="cart-product-qty">
+										<button>-</button>
+										<span>1</span>
+										<button>+</button>
+									</div>
+									<div class="cart-product-price">
+										<p>AED 18.00</p>
+									</div>
+									<div class="cart-product-delete">
+										<img
+											src="./assets/images/icons/delete.svg" />
+									</div>
+								</div>
+								<div class="cart-product-footer">
+									<div class="cart-product-delivery">
+										<img
+											src="./assets/images/icons/truck1.svg" />
+										<span>Delivery Expected by</span>
+										<span>25 June 2024</span>
+									</div>
+								</div>
+							</div>
+							<div class="cart-product">
+								<div class="cart-product-body">
+									<div class="cart-product-img">
+										<img
+											src="./assets/images/productImage-3.png"
+											alt="" />
+									</div>
+									<div class="cart-product-title">
+										<p>
+											Bison Kit Universal Contact Adhesive
+											Glue, Super Strong, Liquid, 650ml
+										</p>
+									</div>
+									<div class="cart-product-qty">
+										<button>-</button>
+										<span>1</span>
+										<button>+</button>
+									</div>
+									<div class="cart-product-price">
+										<p>AED 18.00</p>
+									</div>
+									<div class="cart-product-delete">
+										<img
+											src="./assets/images/icons/delete.svg" />
+									</div>
+								</div>
+								<div class="cart-product-footer">
+									<div class="cart-product-delivery">
+										<img
+											src="./assets/images/icons/truck1.svg" />
+										<span>Delivery Expected by</span>
+										<span>25 June 2024</span>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+					<button class="cart-continue">Continue</button>
 				</div>
 				<div class="cart-right">
 					<div class="cart-right-container">
@@ -145,7 +397,7 @@
 						</div>
 
 						<button class="cart-button">
-							<span>AED 176</span>
+							<span>AED 176.00</span>
 							<div>
 								<span>Checkout</span>
 								<img
@@ -160,7 +412,107 @@
 		<!-- cart section end -->
 
 		<!-- footer start -->
+		<section id="footer">
+			<div class="footer-container">
+				<div class="footer-left">
+					<div class="footer-logo">
+						<img src="./assets/images/Logo 3.png" alt="" />
+					</div>
+					<div class="footer-text">
+						<span class="material-symbols-outlined">
+							distance
+						</span>
+						<span
+							>Address: Al Quoz - 3, Dubai, United Arab Emirates,
+							P.O Box: 73890</span
+						>
+					</div>
 
+					<div class="footer-text">
+						<span class="material-symbols-outlined"> mail </span>
+						<a href=""><span>sales@nqcart.ae</span></a>
+					</div>
+
+					<p>To inquire, please call us on</p>
+
+					<div class="footer-text">
+						<span class="material-symbols-outlined">
+							phone_in_talk
+						</span>
+						<a href=""><span>+971 50 164 3123</span></a>
+					</div>
+
+					<p>
+						Sign up for the latest news, offers and exclusive
+						promotions
+					</p>
+					<div class="footer-input">
+						<input type="text" placeholder="Drop your email" />
+						<button>
+							submit
+							<span class="material-symbols-outlined">
+								arrow_right_alt
+							</span>
+						</button>
+					</div>
+				</div>
+
+				<div class="footer-right">
+					<div class="footer-right-contents">
+						<p>Brands</p>
+						<ul>
+							<li><a href="#">Dewalt</a></li>
+							<li><a href="#">Asmaco</a></li>
+							<li><a href="#">Stanley</a></li>
+							<li><a href="#">Clarke</a></li>
+							<li><a href="#">Bison</a></li>
+							<li><a href="#">More Brands...</a></li>
+						</ul>
+					</div>
+					<div class="footer-right-contents">
+						<p>Categories</p>
+						<ul>
+							<li><a href="#">Water Heaters</a></li>
+							<li><a href="#">Abrasives</a></li>
+							<li><a href="#">Power Tools</a></li>
+							<li><a href="#">Adhesives</a></li>
+							<li><a href="#">Paint Tools</a></li>
+							<li><a href="#">More Categories...</a></li>
+						</ul>
+					</div>
+					<div class="footer-right-contents">
+						<p>Customer Services</p>
+						<ul>
+							<li><a href="#">Track Your Order</a></li>
+							<li><a href="#">Delivery Info</a></li>
+							<li><a href="#">Return & Exchange</a></li>
+							<li><a href="#">FAQs</a></li>
+							<li><a href="#">Sign In</a></li>
+							<li><a href="#">Bulk Enquiries</a></li>
+							<li><a href="#">Service & Warranty</a></li>
+						</ul>
+					</div>
+				</div>
+				<button class="footer-sroll-up">
+					Sroll to top
+					<span class="material-symbols-outlined"> north </span>
+				</button>
+			</div>
+			<div class="social-copyright">
+				<div class="social">
+					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					<a href="#"><i class="fa-brands fa-youtube"></i></a>
+				</div>
+				<div class="copyright">
+					<p>© 2023 <strong>NQCART</strong>. All Rights Reserved</p>
+				</div>
+			</div>
+		</section>
 		<!-- footer end -->
+		<!-- swiper-bundle.min.js -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="./scripts/cart.js"></script>
+		<script src="/scripts/footer.js"></script>
 	</body>
 </html>
