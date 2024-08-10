@@ -2,9 +2,9 @@
 const navMenu = document.querySelector(".icons-container");
 const breadCrumb = document.querySelector(".breadcrumb");
 
-const navHeight = navBar.offsetHeight - -10;
+// const navHeight = navBar.offsetHeight - -10;
 
-breadCrumb.style.marginTop = navHeight + "px";
+// breadCrumb.style.marginTop = navHeight + "px";
 
 /* nav slider */
 const swiperNavSlider = new Swiper(".nav-slider", {

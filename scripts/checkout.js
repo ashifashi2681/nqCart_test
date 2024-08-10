@@ -2,9 +2,9 @@ const navBar = document.getElementById("nav-bar");
 const navMenu = document.querySelector(".icons-container");
 const checkoutSection = document.querySelector("#checkout-section");
 
-const navHeight = navBar.offsetHeight - -0;
+// const navHeight = navBar.offsetHeight - -0;
 
-checkoutSection.style.marginTop = navHeight + "px";
+// checkoutSection.style.marginTop = navHeight + "px";
 
 /* nav slider */
 const swiperNavSlider = new Swiper(".nav-slider", {

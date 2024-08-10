@@ -1,9 +1,9 @@
 const navBar = document.getElementById("nav-bar");
 const breadCrumb = document.querySelector(".breadcrumb");
 
-const navHeight = navBar.offsetHeight - -10;
+// const navHeight = navBar.offsetHeight - -10;
 
-breadCrumb.style.marginTop = navHeight + "px";
+// breadCrumb.style.marginTop = navHeight + "px";
 
 /* product chart size section */
 

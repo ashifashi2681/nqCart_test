@@ -18,9 +18,9 @@ window.addEventListener("click", (e) => {
 	}
 });
 
-const navHeight = navBar.offsetHeight - 1;
+// const navHeight = navBar.offsetHeight - 1;
 
-mainBanner.style.marginTop = navHeight + "px";
+// mainBanner.style.marginTop = navHeight + "px";
 
 
 
