@@ -311,10 +311,11 @@ body {
 	font-size: var(--text-base);
 	font-weight: 600;
 	background: var(--secondery);
-	color: white;
+	color: #ebebeb;
 	padding: 12px;
 	cursor: pointer;
 	border-radius: 5px;
+	border: none;
 	transition: 0.2s linear;
 }
 .checkout-btn > button:hover {
@@ -478,9 +479,6 @@ body {
 		background: #ebebeb;
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		border-radius: 20px 20px 0 0;
-	}
-	.checkout-btn > button {
-		/* width: 100%; */
 	}
 }
 
