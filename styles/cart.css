@@ -353,19 +353,20 @@ body {
 	.cart-container {
 		grid-template-columns: 1fr;
 		padding: 40px 40px;
-		padding-bottom: 150px;
+		padding-bottom: 180px;
 	}
 	
 	.cart-right-container {
 		position: fixed;
 		top: auto;
-		bottom: 0;
+		bottom:0;
 		left: 0;
 		right: 0;
 		z-index: 100;
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 		transition: 0.4s linear;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	}
 
 	.cart-products-container
