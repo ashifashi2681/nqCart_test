@@ -53,9 +53,7 @@ body {
 	background: #f6f6f6;
 }
 
-#nav-bar {
-	display: none;
-}
+
 
 #checkout-section {
 	width: 90%;
@@ -329,7 +327,7 @@ body {
 	padding: 30px;
 	border-radius: 15px;
 	position: sticky;
-	top: 30px;
+	top: 145px;
 }
 .order-summary-head {
 	margin-bottom: 15px;
