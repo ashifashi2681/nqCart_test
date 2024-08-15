@@ -46,3 +46,16 @@ checkBoxes.forEach((checkBox, i) => {
 		});
 	});
 });
+
+/* stepper indicator */
+const completeOrderBtn = document.querySelector(".checkout-btn");
+const checkoutModalContainer = document.querySelector(
+	".chekout-modal-container"
+);
+completeOrderBtn.addEventListener("click",()=> {
+	// console.log('first')
+	window.scrollTo(0,0)
+	checkoutModalContainer.classList.add("active")
+	completeOrderBtn.classList.add("active");
+
+})
