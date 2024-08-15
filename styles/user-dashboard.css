@@ -103,6 +103,7 @@ body {
 	cursor: pointer;
 	font-weight: 500;
 	white-space: nowrap;
+	position: relative;
 }
 .user-dashboard-menu button:last-child {
 	color: red;
@@ -121,6 +122,14 @@ body {
 	color: red;
 }
 
+.user-dashboard-menu button > span:nth-child(3) {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 10px;
+	display: none;
+}
+
 .material-symbols-outlined {
 	font-size: var(--text-xl);
 }
@@ -136,10 +145,20 @@ body {
 	display: block;
 	padding: 0 30px;
 }
+.user-dashboard-profile-section-header {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
 
-.user-dashboard-profile-section > p {
+.user-dashboard-profile-section-header > span {
+	font-size: 1.5rem;
+	font-weight: 700;
+	display: none;
+	cursor: pointer;
+}
+.user-dashboard-profile-section-header > p {
 	font-size: var(--text-xxxl);
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .profile-personal-information-container {
@@ -261,8 +280,6 @@ body {
 	cursor: pointer;
 }
 
-
-
 /* media query 900px */
 
 @media (max-width: 900px) {
@@ -357,6 +374,12 @@ body {
 		min-height: 100vh;
 		grid-template-columns: 1fr;
 	}
+	.user-dashboard-menu button {
+		padding: 20px;
+	}
+	.user-dashboard-menu button > span:nth-child(3) {
+		display: block;
+	}
 	#user-dashboard-right-section {
 		display: block;
 		background: white;
@@ -369,5 +392,13 @@ body {
 	#user-dashboard-right-section.active {
 		transform: translateX(0);
 		transition: 0.2s linear;
+		padding-top: 20px;
 	}
+
+	.user-dashboard-profile-section-header > span {
+		display: block;
+	}
+		.user-dashboard-profile-section-header > p {
+			place-self: center;
+		}
 }
