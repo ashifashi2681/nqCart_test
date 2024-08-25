@@ -180,6 +180,76 @@
 					</a>
 				</div>
 			</div>
+
+			<!-- login&register form -->
+			<div class="login-register-form-overlay">
+				<div class="login-register-form">
+					<button class="login-register-form-cls-btn">X</button>
+
+					<form class="login-form">
+						<p class="login-form-heading">Login</p>
+
+						<div class="login-input-container">
+							<div class="login-input">
+								<input type="text" required />
+								<label>Email</label>
+								<img
+									src="/assets/images/icons/mailFilled.svg" />
+							</div>
+							<div class="login-input">
+								<input type="password" required />
+								<label>Password</label>
+								<img src="/assets/images/icons/lock.svg" />
+							</div>
+						</div>
+
+						<div class="login-misc">
+							<label
+								><input type="checkbox" name="" />Remember
+								me</label
+							>
+							<a href="">Forgot Password?</a>
+						</div>
+
+						<div class="login-btn">
+							<button>Login</button>
+						</div>
+						<p class="login-form-footer-text">
+							Don't have an account?<span> Register</span>
+						</p>
+					</form>
+
+					<form class="register-form">
+						<p class="register-form-heading">Register</p>
+
+						<div class="register-input-container">
+							<div class="register-input">
+								<input type="text" required />
+								<label>Name</label>
+								<img src="/assets/images/icons/user.svg" />
+							</div>
+							<div class="register-input">
+								<input type="text" required />
+								<label>Email</label>
+								<img
+									src="/assets/images/icons/mailFilled.svg" />
+							</div>
+							<div class="register-input">
+								<input type="password" required />
+								<label>Password</label>
+								<img src="/assets/images/icons/lock.svg" />
+							</div>
+						</div>
+
+						<div class="register-btn">
+							<button>Register</button>
+						</div>
+						<p class="register-form-footer-text">
+							Already have an account?<span>Login</span>
+						</p>
+					</form>
+				</div>
+			</div>
 		</section>
 		<!-- nav bar end -->
 
@@ -288,7 +358,139 @@
 				<div
 					id="user-dashboard-right-section"
 					class="user-dashboard-order-section">
-					my order
+					<div class="user-dashboard-order-section-header">
+						<span class="material-symbols-outlined">
+							arrow_back
+						</span>
+						<p>My Order</p>
+					</div>
+					<div class="user-dashboard-order-container">
+						<div class="user-dashboard-order-header">
+							<div class="user-dashboard-order-header-part1">
+								<p>Order<span>#10900</span></p>
+								<span>Order on: <span>20 June 2024</span></span>
+							</div>
+							<div class="user-dashboard-order-header-part2">
+								<p>
+									Deilivery Expected by:
+									<span>25 june 2024</span>
+								</p>
+								<button>
+									<img
+										src="/assets/images/icons/truck-location.svg" />
+									Track Order
+								</button>
+							</div>
+						</div>
+
+						<div class="user-dashboard-order-products-container">
+							<div class="user-dashboard-order-product">
+								<div class="user-dashboard-order-product-img">
+									<img
+										src="/assets/images/productImage-7.png" />
+								</div>
+								<div
+									class="user-dashboard-order-product-details">
+									<p
+										class="user-dashboard-order-product-name">
+										Bison Kit Universal Contact Adhesive
+										Glue, Super Strong, Liquid, 650ml
+									</p>
+									<div
+										class="user-dashboard-order-product-price-qty">
+										<span>Qty:<span>1</span></span>
+										<p>AED 18.00</p>
+									</div>
+								</div>
+								<div
+									class="user-dashboard-order-product-status">
+									<span>Status</span>
+									<p>Shipped</p>
+								</div>
+							</div>
+							<div class="user-dashboard-order-product">
+								<div class="user-dashboard-order-product-img">
+									<img
+										src="/assets/images/productImage-7.png" />
+								</div>
+								<div
+									class="user-dashboard-order-product-details">
+									<p
+										class="user-dashboard-order-product-name">
+										Bison Kit Universal Contact Adhesive
+										Glue, Super Strong, Liquid, 650ml
+									</p>
+									<div
+										class="user-dashboard-order-product-price-qty">
+										<span>Qty:<span>1</span></span>
+										<p>AED 18.00</p>
+									</div>
+								</div>
+								<div
+									class="user-dashboard-order-product-status">
+									<span>Status</span>
+									<p>Shipped</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="user-dashboard-order-footer">
+							<button>X Cancel Order</button>
+							<p>AED 176</p>
+						</div>
+					</div>
+
+					<div class="user-dashboard-order-container">
+						<div class="user-dashboard-order-header">
+							<div class="user-dashboard-order-header-part1">
+								<p>Order<span>#10900</span></p>
+								<span>Order on: <span>20 June 2024</span></span>
+							</div>
+							<!-- <div class="user-dashboard-order-header-part2">
+								<p>
+									Deilivery Expected by:
+									<span>25 june 2024</span>
+								</p>
+								<button>
+									<img
+										src="/assets/images/icons/truck-location.svg" />
+									Track Order
+								</button>
+							</div> -->
+						</div>
+
+						<div class="user-dashboard-order-products-container">
+							<div class="user-dashboard-order-product">
+								<div class="user-dashboard-order-product-img">
+									<img
+										src="/assets/images/productImage-7.png" />
+								</div>
+								<div
+									class="user-dashboard-order-product-details">
+									<p
+										class="user-dashboard-order-product-name">
+										Bison Kit Universal Contact Adhesive
+										Glue, Super Strong, Liquid, 650ml
+									</p>
+									<div
+										class="user-dashboard-order-product-price-qty">
+										<span>Qty:<span>1</span></span>
+										<p>AED 18.00</p>
+									</div>
+								</div>
+								<div
+									class="user-dashboard-order-product-status">
+									<span>Status</span>
+									<p>Delivered</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="user-dashboard-order-footer">
+							<!-- <button>X Cancel Order</button> -->
+							<p>AED 176</p>
+						</div>
+					</div>
 				</div>
 
 				<div

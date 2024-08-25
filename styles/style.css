@@ -21,7 +21,7 @@
 	--text-lg: clamp(0.8539rem, 0.7362rem + 0.5882vi, 1.2656rem);
 	--text-xl: clamp(0.9111rem, 0.7646rem + 0.7325vi, 1.4238rem);
 	--text-xxl: clamp(0.9721rem, 0.7922rem + 0.8996vi, 1.6018rem);
-	--text-xxxl: clamp(1.0372rem, 0.8187rem + 1.0925vi, 1.802rem);
+	--text-xxxl: clamp(1.0372rem, 0.8187rem + 1.0925vi, 1.999rem);
 }
 
 ::-moz-selection {
