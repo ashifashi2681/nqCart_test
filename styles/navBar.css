@@ -363,7 +363,6 @@
 	display: grid;
 	place-content: center;
 	display: none;
-
 }
 
 .login-register-form-overlay.active {
